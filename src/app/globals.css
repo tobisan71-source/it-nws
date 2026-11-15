@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0f172a;
+  --foreground: #e2e8f0;
+  --teal: #14b8a6;
+  --navy: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(20, 184, 166, 0.35);
+  color: #fff;
+}
+
+@layer components {
+  .section-pad {
+    @apply px-5 py-20 sm:px-8 lg:px-10 lg:py-28;
+  }
+
+  .container-narrow {
+    @apply mx-auto w-full max-w-6xl;
+  }
+
+  .eyebrow {
+    @apply font-display text-xs font-semibold uppercase tracking-[0.18em] text-teal-400;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-teal-500 px-5 py-3 text-sm font-semibold text-navy-900 transition hover:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-400;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:border-teal-400/60 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-400;
+  }
+
+  .input-field {
+    @apply w-full rounded-md border border-white/15 bg-navy-900/60 px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-teal-500 focus:ring-1 focus:ring-teal-500;
+  }
+
+  .label-field {
+    @apply mb-1.5 block text-sm font-medium text-slate-300;
+  }
+}
