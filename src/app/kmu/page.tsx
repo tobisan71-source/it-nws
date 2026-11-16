@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import { CtaBand } from "@/components/CtaBand";
 
 export const metadata: Metadata = {
   title: "IT für KMU",
@@ -81,11 +82,15 @@ const trustPoints = [
   },
   {
     title: "Ganze IT fürs Geschäft",
-        text: "Support inkl. Remote-Hilfe, Sicherung, Sicherheit, Microsoft 365 und Arbeitsplätze — abgestimmt auf Ihren Alltag.",
+    text: "Support inkl. Remote-Hilfe, Sicherung, Sicherheit, Microsoft 365 und Arbeitsplätze — abgestimmt auf Ihren Alltag.",
   },
   {
     title: "Antwort mit Erwartung",
     text: "In der Regel innerhalb eines Werktags. Klar, erreichbar, ohne Verkaufsdruck.",
+  },
+  {
+    title: "Passend für Vereine & Selbständige",
+    text: "Schlanke Lösungen, klare Kosten-Logik, ohne Enterprise-Overhead — in Basel und der Nordwestschweiz.",
   },
 ];
 
@@ -173,6 +178,26 @@ export default function KmuPage() {
                 Microsoft 365 und Cloud-Dienste bleiben nutzbar — ergänzt um Backup, Schutz,
                 klare Zugänge und jemanden, den Sie in der Region wirklich erreichen.
               </p>
+              <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+                <li>
+                  <Link href="/microsoft-365-support-basel" className="text-teal-400 hover:underline">
+                    M365 Support Basel
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/it-support-kmu-nordwestschweiz"
+                    className="text-teal-400 hover:underline"
+                  >
+                    IT-Support KMU NWS
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/webseiten-kmu-basel" className="text-teal-400 hover:underline">
+                    Webseiten KMU Basel
+                  </Link>
+                </li>
+              </ul>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
               <Link href="/kontakt" className="btn-primary">
@@ -192,7 +217,7 @@ export default function KmuPage() {
           <h2 className="mt-3 font-display text-3xl font-bold text-white">
             Warum KMU mit IT NWS arbeiten
           </h2>
-          <div className="mt-10 grid gap-8 md:grid-cols-3">
+          <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {trustPoints.map((item) => (
               <div key={item.title} className="border-l-2 border-teal-500/50 pl-4">
                 <h3 className="font-display text-base font-semibold text-white">{item.title}</h3>
@@ -203,28 +228,11 @@ export default function KmuPage() {
         </div>
       </section>
 
-      <section className="bg-navy-800">
-        <div className="container-narrow section-pad text-center">
-          <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
-            Bereit für IT mit Sicherheitsnetz?
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-slate-300">
-            Persönlich statt Hotline. Wir klären den nächsten sinnvollen Schritt — ohne
-            Verkaufsdruck.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Link href="/kontakt" className="btn-primary">
-              KMU-Beratung anfragen
-            </Link>
-            <a href="tel:+41788366320" className="btn-secondary">
-              Anrufen: 078 836 63 20
-            </a>
-          </div>
-          <p className="mt-5 text-sm text-slate-500">
-            Persönlich aus Therwil · Antwort in der Regel 1 Werktag · Nordwestschweiz
-          </p>
-        </div>
-      </section>
+      <CtaBand
+        title="Bereit für IT mit Sicherheitsnetz?"
+        lead="Persönlich statt Hotline. Wir klären den nächsten sinnvollen Schritt — ohne Verkaufsdruck."
+        primaryLabel="KMU-Beratung anfragen"
+      />
     </>
   );
 }

@@ -1,10 +1,19 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
-import { CONTACT_EMAIL, CONTACT_MAILTO } from "@/lib/site";
+import {
+  CONTACT_ADDRESS_LINE,
+  CONTACT_EMAIL,
+  CONTACT_MAILTO,
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_TEL,
+  CONTACT_STREET,
+  CONTACT_ZIP_CITY,
+} from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Impressum von IT NWS — Platzhalter für Firmendaten.",
+  description: "Impressum von IT NWS — Kontaktdaten und Angaben gemäss Schweizer Recht.",
   robots: { index: false, follow: true },
 };
 
@@ -14,20 +23,21 @@ export default function ImpressumPage() {
       <PageHero
         eyebrow="Rechtliches"
         title="Impressum"
-        lead="Platzhalterseite. Bitte echte Firmendaten vor dem Go-Live eintragen."
+        lead="Angaben zur Betreiberin bzw. zum Betreiber der Website it-nws.ch."
       />
       <section className="bg-navy-800">
         <div className="container-narrow section-pad prose-invert max-w-3xl space-y-6 text-sm leading-relaxed text-slate-300">
-          <div className="rounded-md border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-amber-100">
-            TODO: Firma, Rechtsform, Adresse, UID, Telefon und ggf. Haftungsausschluss
-            mit realen Angaben ersetzen. Kontakt-E-Mail ist gesetzt.
-          </div>
           <div>
-            <h2 className="font-display text-lg font-semibold text-white">Angaben gemäss Schweizer Recht</h2>
+            <h2 className="font-display text-lg font-semibold text-white">
+              Angaben gemäss Schweizer Recht
+            </h2>
             <p className="mt-2">
-              IT NWS (IT Nordwestschweiz)<br />
-              [TODO: Strasse / Nr.]<br />
-              [TODO: PLZ Ort]<br />
+              IT NWS (IT Nordwestschweiz)
+              <br />
+              {CONTACT_STREET}
+              <br />
+              {CONTACT_ZIP_CITY}
+              <br />
               Schweiz
             </p>
           </div>
@@ -39,12 +49,19 @@ export default function ImpressumPage() {
                 {CONTACT_EMAIL}
               </a>
               <br />
-              Telefon: [TODO: Telefon]
+              Telefon:{" "}
+              <a href={CONTACT_PHONE_TEL} className="text-teal-400 hover:underline">
+                {CONTACT_PHONE_DISPLAY}
+              </a>
+              <br />
+              Adresse: {CONTACT_ADDRESS_LINE}
             </p>
           </div>
           <div>
             <h2 className="font-display text-lg font-semibold text-white">UID / Handelsregister</h2>
-            <p className="mt-2">[TODO: CHE-xxx.xxx.xxx] — sofern eingetragen.</p>
+            <p className="mt-2">
+              UID wird ergänzt, sobald die Eintragung vorliegt bzw. bekanntgegeben wird.
+            </p>
           </div>
           <div>
             <h2 className="font-display text-lg font-semibold text-white">Haftung für Inhalte</h2>
@@ -54,6 +71,11 @@ export default function ImpressumPage() {
               Auskünfte erfolgen im direkten Kundenkontakt.
             </p>
           </div>
+          <p className="pt-4">
+            <Link href="/kontakt" className="btn-primary inline-flex">
+              Kontakt aufnehmen
+            </Link>
+          </p>
         </div>
       </section>
     </>

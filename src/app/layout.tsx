@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   keywords: [
     "IT Nordwestschweiz",
     "IT NWS",
+    "IT Therwil",
+    "IT Basel",
+    "Basel-Landschaft",
     "Backup",
     "Cyber Security",
     "KMU IT",
@@ -36,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "IT NWS – IT mit Sicherheitsnetz.",
     description:
-      "Lokaler IT-Partner für Privatkunden, Vereine und KMU in der Nordwestschweiz.",
+      "Lokaler IT-Partner in Therwil für Privatkunden, Vereine und KMU in Basel und der Nordwestschweiz.",
     locale: "de_CH",
     type: "website",
   },
