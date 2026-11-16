@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useState } from "react";
+import { CONTACT_EMAIL, CONTACT_MAILTO } from "@/lib/site";
 
 export type ContactMode = "kontakt" | "termin";
 
@@ -77,7 +78,10 @@ export function ContactForm({ initialMode = "kontakt" }: Props) {
         <p className="mt-3 text-sm leading-relaxed text-slate-300">
           Danke, {name.trim()}. Dies ist eine Demo ohne Backend — Ihre Angaben wurden
           nicht übermittelt. Später wird hier die echte Zustellung an{" "}
-          <span className="text-slate-200">[TODO: E-Mail]</span> angebunden.
+          <a href={CONTACT_MAILTO} className="text-teal-400 hover:underline">
+            {CONTACT_EMAIL}
+          </a>{" "}
+          angebunden.
         </p>
         <button
           type="button"

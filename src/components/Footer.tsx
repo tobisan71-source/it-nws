@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BrandLogo } from "@/components/BrandLogo";
+import { CONTACT_EMAIL, CONTACT_MAILTO } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -40,7 +41,9 @@ export function Footer() {
             </ul>
             <p className="mt-6 text-sm text-slate-500">
               Region Nordwestschweiz ·{" "}
-              <span className="text-slate-400">[TODO: E-Mail]</span>
+              <a href={CONTACT_MAILTO} className="text-slate-400 hover:text-teal-400">
+                {CONTACT_EMAIL}
+              </a>
             </p>
           </div>
         </div>
