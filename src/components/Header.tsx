@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { BrandLogo } from "@/components/BrandLogo";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -19,11 +20,13 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy-900/85 backdrop-blur-md">
       <div className="container-narrow flex items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-10">
-        <Link href="/" className="group flex items-baseline gap-2" onClick={() => setOpen(false)}>
-          <span className="font-display text-xl font-bold tracking-tight text-white sm:text-2xl">
-            IT NWS
-          </span>
-          <span className="hidden text-xs text-slate-400 sm:inline">Nordwestschweiz</span>
+        <Link
+          href="/"
+          className="group inline-flex shrink-0 items-center"
+          onClick={() => setOpen(false)}
+          aria-label="IT NWS – Startseite"
+        >
+          <BrandLogo size="header" />
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Hauptnavigation">
