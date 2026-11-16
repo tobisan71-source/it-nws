@@ -1,29 +1,38 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import { CtaBand } from "@/components/CtaBand";
 
 export const metadata: Metadata = {
   title: "Privatkunden",
   description:
-    "Persönlicher PC-Service, Backup und Sicherheit für Privatkunden in der Nordwestschweiz.",
+    "PC einrichten, Datenübertragung, Diagnose, SSD, Datenrettung und Backup für Privatkunden in Therwil, Basel und der Nordwestschweiz.",
 };
 
 const points = [
   {
-    title: "PC & Laptop wieder flott",
-    text: "Langsam, voll oder unsicher? Wir richten ein, bereinigen und erklären verständlich.",
+    title: "PC & Laptop einrichten",
+    text: "Neues Gerät sauber aufsetzen, Altlasten vermeiden und so erklären, dass Sie danach selbst zurechtkommen.",
   },
   {
-    title: "Fotos & Daten sichern",
-    text: "Backup, das Sie verstehen — damit Familienfotos und wichtige Dokumente nicht verloren gehen.",
+    title: "Datenübertragung",
+    text: "Fotos, Dokumente und Programme vom alten auf den neuen Rechner — nachvollziehbar und ohne Datenchaos.",
   },
   {
-    title: "Sicheres Surfen",
-    text: "Grundschutz gegen Betrug, Phishing und riskante Downloads — ohne Technik-Jargon.",
+    title: "Diagnose bei Störungen",
+    text: "Langsam, abstürzend oder unsicher? Wir finden die Ursache und priorisieren den nächsten sinnvollen Schritt.",
   },
   {
-    title: "Persönlich vor Ort / remote",
-    text: "Je nach Situation: remote helfen oder in der Region Nordwestschweiz unterstützen.",
+    title: "SSD-Upgrade & Tempo",
+    text: "Wenn der Rechner noch taugt: Speicher und Performance gezielt verbessern statt unnötig neu kaufen.",
+  },
+  {
+    title: "Datenrettung",
+    text: "Nach Defekt oder Fehlbedienung retten, was noch rettbar ist — ehrlich zur Erfolgsaussicht.",
+  },
+  {
+    title: "Backup, das greift",
+    text: "Sicherung, die Sie verstehen und im Ernstfall wiederherstellen können — ergänzend zur Cloud.",
   },
 ];
 
@@ -31,12 +40,12 @@ export default function PrivatkundenPage() {
   return (
     <>
       <PageHero
-        eyebrow="Privatkunden"
+        eyebrow="Privatkunden · Therwil · Basel"
         title="IT-Hilfe, der Sie vertrauen können"
-        lead="Kein PC-Shop-Druck, keine Hotline. Jemand, der Ihre Geräte kennt und Ihre Daten ernst nimmt."
+        lead="Kein PC-Shop-Druck, keine Hotline. Einrichten, Datenübertragung, Diagnose, SSD, Datenrettung und Backup — persönlich in der Nordwestschweiz."
       />
 
-      <section className="bg-navy-800">
+      <section className="border-b border-white/10 bg-navy-800">
         <div className="container-narrow section-pad">
           <div className="grid gap-8 md:grid-cols-2">
             {points.map((item) => (
@@ -47,24 +56,36 @@ export default function PrivatkundenPage() {
             ))}
           </div>
 
-          <div className="mt-16 text-center">
-            <p className="font-display text-2xl font-semibold text-white">
-              Persönlich statt Hotline.
+          <div className="mt-16 rounded-lg border border-white/10 bg-white/[0.03] p-8">
+            <p className="eyebrow">Lokal</p>
+            <h2 className="mt-3 font-display text-2xl font-bold text-white">
+              Persönlich in Therwil und der Region Basel
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-300">
+              Ob remote oder vor Ort in Basel-Landschaft und der Nordwestschweiz: Sie sprechen
+              direkt mit der Person, die Ihre IT betreut.
             </p>
-            <p className="mx-auto mt-3 max-w-lg text-sm text-slate-300">
-              Schreiben Sie kurz, was hakt — PC, Backup, E-Mail oder Sicherheit. Wir melden uns.
-            </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <Link href="/kontakt" className="btn-primary">
-                Hilfe anfragen
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link href="/pc-reparatur-therwil" className="btn-secondary">
+                PC-Reparatur Therwil
               </Link>
-              <Link href="/kontakt#termin" className="btn-secondary">
-                Termin anfragen
+              <Link href="/pc-reparatur-basel" className="btn-secondary">
+                PC-Reparatur Basel
+              </Link>
+              <Link href="/datensicherung-basel" className="btn-secondary">
+                Datensicherung Basel
               </Link>
             </div>
           </div>
         </div>
       </section>
+
+      <CtaBand
+        title="Persönlich statt Hotline."
+        lead="Schreiben Sie kurz, was hakt — PC, Backup, E-Mail oder Sicherheit. Wir melden uns aus Therwil."
+        primaryLabel="Hilfe anfragen"
+        secondaryLabel="Termin anfragen"
+      />
     </>
   );
 }
