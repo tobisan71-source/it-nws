@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
-import { CONTACT_EMAIL, CONTACT_MAILTO } from "@/lib/site";
+import {
+  CONTACT_CITY,
+  CONTACT_COUNTRY,
+  CONTACT_EMAIL,
+  CONTACT_MAILTO,
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_TEL,
+  CONTACT_STREET,
+} from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Impressum von IT NWS — Platzhalter für Firmendaten.",
+  description: "Impressum von IT NWS — Kontaktdaten und Angaben gemäss Schweizer Recht.",
   robots: { index: false, follow: true },
 };
 
@@ -14,21 +22,21 @@ export default function ImpressumPage() {
       <PageHero
         eyebrow="Rechtliches"
         title="Impressum"
-        lead="Platzhalterseite. Bitte echte Firmendaten vor dem Go-Live eintragen."
+        lead="Angaben zu IT NWS in Therwil. UID/Rechtsform bei Bedarf noch ergänzen."
       />
       <section className="bg-navy-800">
         <div className="container-narrow section-pad prose-invert max-w-3xl space-y-6 text-sm leading-relaxed text-slate-300">
           <div className="rounded-md border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-amber-100">
-            TODO: Firma, Rechtsform, Adresse, UID, Telefon und ggf. Haftungsausschluss
-            mit realen Angaben ersetzen. Kontakt-E-Mail ist gesetzt.
+            TODO: Firma/Rechtsform, UID und ggf. Haftungsausschluss bei Bedarf noch ergänzen.
+            Adresse, Telefon und E-Mail sind gesetzt.
           </div>
           <div>
             <h2 className="font-display text-lg font-semibold text-white">Angaben gemäss Schweizer Recht</h2>
             <p className="mt-2">
               IT NWS (IT Nordwestschweiz)<br />
-              [TODO: Strasse / Nr.]<br />
-              [TODO: PLZ Ort]<br />
-              Schweiz
+              {CONTACT_STREET}<br />
+              {CONTACT_CITY}<br />
+              {CONTACT_COUNTRY}
             </p>
           </div>
           <div>
@@ -39,7 +47,10 @@ export default function ImpressumPage() {
                 {CONTACT_EMAIL}
               </a>
               <br />
-              Telefon: [TODO: Telefon]
+              Telefon:{" "}
+              <a href={CONTACT_PHONE_TEL} className="text-teal-400 hover:underline">
+                {CONTACT_PHONE_DISPLAY}
+              </a>
             </p>
           </div>
           <div>

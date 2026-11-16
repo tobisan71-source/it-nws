@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
-import { CONTACT_EMAIL, CONTACT_MAILTO } from "@/lib/site";
+import {
+  CONTACT_ADDRESS_LINE,
+  CONTACT_COUNTRY,
+  CONTACT_EMAIL,
+  CONTACT_MAILTO,
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_TEL,
+} from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Datenschutz",
@@ -26,10 +33,16 @@ export default function DatenschutzPage() {
             <h2 className="font-display text-lg font-semibold text-white">1. Verantwortliche Stelle</h2>
             <p className="mt-2">
               IT NWS (IT Nordwestschweiz)<br />
-              [TODO: Adresse]<br />
+              {CONTACT_ADDRESS_LINE}<br />
+              {CONTACT_COUNTRY}<br />
               E-Mail:{" "}
               <a href={CONTACT_MAILTO} className="text-teal-400 hover:underline">
                 {CONTACT_EMAIL}
+              </a>
+              <br />
+              Telefon:{" "}
+              <a href={CONTACT_PHONE_TEL} className="text-teal-400 hover:underline">
+                {CONTACT_PHONE_DISPLAY}
               </a>
             </p>
           </div>

@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
 import { PageHero } from "@/components/PageHero";
-import { CONTACT_EMAIL, CONTACT_MAILTO } from "@/lib/site";
+import {
+  CONTACT_ADDRESS_LINE,
+  CONTACT_EMAIL,
+  CONTACT_MAILTO,
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_TEL,
+} from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Kontakt",
@@ -25,14 +31,26 @@ export default function KontaktPage() {
               <h2 className="font-display text-xl font-semibold text-white">Direkt</h2>
               <dl className="mt-4 space-y-3 text-sm text-slate-300">
                 <div>
+                  <dt className="text-slate-500">Adresse</dt>
+                  <dd>{CONTACT_ADDRESS_LINE}</dd>
+                </div>
+                <div>
                   <dt className="text-slate-500">Region</dt>
-                  <dd>Nordwestschweiz</dd>
+                  <dd>Nordwestschweiz · Therwil / Basel-Landschaft</dd>
                 </div>
                 <div>
                   <dt className="text-slate-500">E-Mail</dt>
                   <dd>
                     <a href={CONTACT_MAILTO} className="text-teal-400 hover:underline">
                       {CONTACT_EMAIL}
+                    </a>
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-slate-500">Telefon</dt>
+                  <dd>
+                    <a href={CONTACT_PHONE_TEL} className="text-teal-400 hover:underline">
+                      {CONTACT_PHONE_DISPLAY}
                     </a>
                   </dd>
                 </div>
