@@ -1,4 +1,11 @@
 import Link from "next/link";
+import {
+  CONTACT_ADDRESS_LINE,
+  CONTACT_EMAIL,
+  CONTACT_MAILTO,
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_TEL,
+} from "@/lib/site";
 
 export function Footer() {
   return (
@@ -29,10 +36,18 @@ export function Footer() {
               <li><Link href="/impressum" className="hover:text-teal-400">Impressum</Link></li>
               <li><Link href="/datenschutz" className="hover:text-teal-400">Datenschutz</Link></li>
             </ul>
-            <p className="mt-6 text-sm text-slate-500">
-              Region Nordwestschweiz ·{" "}
-              <span className="text-slate-400">[TODO: E-Mail]</span>
-            </p>
+            <div className="mt-6 space-y-1 text-sm text-slate-500">
+              <p>{CONTACT_ADDRESS_LINE}</p>
+              <p>
+                <a href={CONTACT_PHONE_TEL} className="text-slate-400 hover:text-teal-400">
+                  {CONTACT_PHONE_DISPLAY}
+                </a>
+                {" · "}
+                <a href={CONTACT_MAILTO} className="text-slate-400 hover:text-teal-400">
+                  {CONTACT_EMAIL}
+                </a>
+              </p>
+            </div>
           </div>
         </div>
 
