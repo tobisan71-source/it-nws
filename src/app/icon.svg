@@ -1,13 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="IT NWS Nordwestschweiz">
   <rect width="320" height="320" fill="#0F172A"/>
-  <!-- Network + safety-net mark (no Swiss cross) -->
-  <circle cx="130" cy="88" r="8" fill="none" stroke="#14B8A6" stroke-width="3"/>
-  <circle cx="190" cy="88" r="8" fill="none" stroke="#14B8A6" stroke-width="3"/>
-  <circle cx="160" cy="128" r="8" fill="none" stroke="#FFFFFF" stroke-width="3"/>
-  <path d="M138 88h44M136 94l18 28M184 94l-18 28" fill="none" stroke="#14B8A6" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M118 148c14 22 40 34 42 34s28-12 42-34" fill="none" stroke="#14B8A6" stroke-width="2.5" stroke-linecap="round"/>
-  <text x="160" y="210" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" letter-spacing="1">
+  <!-- Simple CPU + network mark (no Swiss cross) -->
+  <!-- CPU die -->
+  <rect x="118" y="72" width="84" height="84" rx="10" fill="none" stroke="#14B8A6" stroke-width="3"/>
+  <!-- CPU pads -->
+  <path d="M132 72v-8M148 72v-8M172 72v-8M188 72v-8M132 156v8M148 156v8M172 156v8M188 156v8M118 88h-8M118 108h-8M118 128h-8M202 88h8M202 108h8M202 128h8" fill="none" stroke="#14B8A6" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Network nodes inside die -->
+  <circle cx="160" cy="100" r="6" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+  <circle cx="140" cy="128" r="5" fill="none" stroke="#14B8A6" stroke-width="2.5"/>
+  <circle cx="180" cy="128" r="5" fill="none" stroke="#14B8A6" stroke-width="2.5"/>
+  <path d="M160 106v12M154 118l-10 6M166 118l10 6M145 128h30" fill="none" stroke="#14B8A6" stroke-width="2" stroke-linecap="round"/>
+  <!-- Soft safety-net hint -->
+  <path d="M128 176c12 18 28 28 32 28s20-10 32-28" fill="none" stroke="#14B8A6" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+  <text x="160" y="230" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" letter-spacing="1">
     <tspan fill="#FFFFFF">IT </tspan><tspan fill="#14B8A6">NWS</tspan>
   </text>
-  <text x="160" y="248" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#94A3B8" letter-spacing="2">Nordwestschweiz</text>
+  <text x="160" y="262" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#94A3B8" letter-spacing="2">Nordwestschweiz</text>
 </svg>
