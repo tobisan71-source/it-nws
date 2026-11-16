@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="IT NWS Nordwestschweiz">
+  <rect width="320" height="320" fill="#0F172A"/>
+  <!-- Network + safety-net mark (no Swiss cross) -->
+  <circle cx="130" cy="88" r="8" fill="none" stroke="#14B8A6" stroke-width="3"/>
+  <circle cx="190" cy="88" r="8" fill="none" stroke="#14B8A6" stroke-width="3"/>
+  <circle cx="160" cy="128" r="8" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+  <path d="M138 88h44M136 94l18 28M184 94l-18 28" fill="none" stroke="#14B8A6" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M118 148c14 22 40 34 42 34s28-12 42-34" fill="none" stroke="#14B8A6" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="160" y="210" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" letter-spacing="1">
+    <tspan fill="#FFFFFF">IT </tspan><tspan fill="#14B8A6">NWS</tspan>
+  </text>
+  <text x="160" y="248" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#94A3B8" letter-spacing="2">Nordwestschweiz</text>
+</svg>
