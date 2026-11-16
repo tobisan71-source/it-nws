@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import {
+  CONTACT_ADDRESS_LINE,
+  CONTACT_EMAIL,
+  CONTACT_MAILTO,
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_TEL,
+} from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Datenschutz",
-  description: "Datenschutzerklärung von IT NWS — Platzhalter.",
+  description: "Datenschutzerklärung von IT NWS.",
   robots: { index: false, follow: true },
 };
 
@@ -13,20 +21,26 @@ export default function DatenschutzPage() {
       <PageHero
         eyebrow="Rechtliches"
         title="Datenschutz"
-        lead="Minimale Musterseite nach Schweizer Praxis. Vor dem Go-Live rechtlich prüfen und anpassen."
+        lead="Informationen zur Bearbeitung personenbezogener Daten auf it-nws.ch."
       />
       <section className="bg-navy-800">
         <div className="container-narrow section-pad max-w-3xl space-y-6 text-sm leading-relaxed text-slate-300">
-          <div className="rounded-md border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-amber-100">
-            TODO: Verantwortliche Stelle, Hosting-Anbieter, eingesetzte Tools (Analytics,
-            Formular-Backend) und Aufbewahrungsfristen konkretisieren.
-          </div>
           <div>
             <h2 className="font-display text-lg font-semibold text-white">1. Verantwortliche Stelle</h2>
             <p className="mt-2">
-              IT NWS (IT Nordwestschweiz)<br />
-              [TODO: Adresse]<br />
-              E-Mail: [TODO: E-Mail]
+              IT NWS (IT Nordwestschweiz)
+              <br />
+              {CONTACT_ADDRESS_LINE}
+              <br />
+              E-Mail:{" "}
+              <a href={CONTACT_MAILTO} className="text-teal-400 hover:underline">
+                {CONTACT_EMAIL}
+              </a>
+              <br />
+              Telefon:{" "}
+              <a href={CONTACT_PHONE_TEL} className="text-teal-400 hover:underline">
+                {CONTACT_PHONE_DISPLAY}
+              </a>
             </p>
           </div>
           <div>
@@ -61,6 +75,11 @@ export default function DatenschutzPage() {
               Analytics) eingesetzt werden.
             </p>
           </div>
+          <p className="pt-4">
+            <Link href="/kontakt" className="btn-primary inline-flex">
+              Datenschutz-Anfrage stellen
+            </Link>
+          </p>
         </div>
       </section>
     </>
