@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
+import { CONTACT_EMAIL, CONTACT_MAILTO } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Datenschutz",
@@ -26,7 +27,10 @@ export default function DatenschutzPage() {
             <p className="mt-2">
               IT NWS (IT Nordwestschweiz)<br />
               [TODO: Adresse]<br />
-              E-Mail: [TODO: E-Mail]
+              E-Mail:{" "}
+              <a href={CONTACT_MAILTO} className="text-teal-400 hover:underline">
+                {CONTACT_EMAIL}
+              </a>
             </p>
           </div>
           <div>

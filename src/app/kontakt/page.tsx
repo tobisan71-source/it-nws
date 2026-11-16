@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
 import { PageHero } from "@/components/PageHero";
+import { CONTACT_EMAIL, CONTACT_MAILTO } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Kontakt",
@@ -29,7 +30,11 @@ export default function KontaktPage() {
                 </div>
                 <div>
                   <dt className="text-slate-500">E-Mail</dt>
-                  <dd>[TODO: E-Mail eintragen]</dd>
+                  <dd>
+                    <a href={CONTACT_MAILTO} className="text-teal-400 hover:underline">
+                      {CONTACT_EMAIL}
+                    </a>
+                  </dd>
                 </div>
                 <div>
                   <dt className="text-slate-500">Reaktionszeit</dt>
