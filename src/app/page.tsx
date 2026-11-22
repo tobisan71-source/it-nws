@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { HeroVisual } from "@/components/HeroVisual";
 import { CtaBand } from "@/components/CtaBand";
+import { TobiasPortrait } from "@/components/TobiasPortrait";
 import {
   IconBuilding,
   IconDesktop,
@@ -13,6 +14,8 @@ import {
   IconServer,
   IconTablet,
 } from "@/components/ServiceIcons";
+import { OWNER_NAME } from "@/lib/site";
+
 
 const deviceCards = [
   {
@@ -248,22 +251,15 @@ export default function HomePage() {
 
       <section id="ueber-mich" className="scroll-mt-24 border-b border-white/10 bg-navy-900">
         <div className="container-narrow section-pad grid gap-10 lg:grid-cols-[240px_1fr] lg:items-center">
-          <div className="relative mx-auto aspect-[5/6] w-48 overflow-hidden rounded-lg border border-white/10 bg-navy-900 sm:w-56 lg:mx-0 lg:w-full">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/portrait-placeholder.svg"
-              alt="Platzhalter: Porträt folgt — IT NWS Ansprechpartner"
-              className="h-full w-full object-cover"
-            />
-          </div>
+          <TobiasPortrait size="about" priority />
           <div>
             <p className="eyebrow">Über mich</p>
             <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">
               Wer steckt hinter IT NWS?
             </h2>
             <p className="mt-4 max-w-2xl text-slate-300 leading-relaxed">
-              IT NWS ist kein Callcenter und keine anonyme Hotline. Hinter der Marke steht
-              eine Person aus Therwil in Basel-Landschaft — mit Fokus auf Datensicherung,
+              IT NWS ist kein Callcenter und keine anonyme Hotline. Hinter der Marke steht{" "}
+              {OWNER_NAME} aus Therwil in Basel-Landschaft — mit Fokus auf Datensicherung,
               sichere Cloud-Nutzung und alltagsnahe IT-Hilfe für Privatkunden, Vereine und KMU
               in Basel und der Nordwestschweiz.
             </p>
