@@ -27,7 +27,12 @@ const services = [
   },
   {
     title: "Webseiten & Hosting",
-    points: ["Einfache Firmen-/Vereinsseiten", "Wartung", "Sicheres Hosting"],
+    points: [
+      "Firmen-, Vereins- und Privatseiten",
+      "Wartung",
+      "Sicheres Hosting & SSL",
+      "Sichere E-Mails",
+    ],
   },
   {
     title: "KMU-Betreuung",
