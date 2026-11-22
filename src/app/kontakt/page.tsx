@@ -62,8 +62,8 @@ export default function KontaktPage() {
               </dl>
             </div>
             <p className="rounded-md border border-white/10 bg-white/[0.03] p-4 text-sm leading-relaxed text-slate-400">
-              Das Formular speichert lokal nur den Success-State — es gibt noch kein Backend.
-              Später an echte Zustellung an {CONTACT_EMAIL} anbinden.
+              Das Formular sendet Ihre Anfrage an {CONTACT_EMAIL}. Alternativ
+              können Sie uns auch direkt per E-Mail oder Telefon erreichen.
             </p>
             <a href={CONTACT_MAILTO} className="btn-secondary inline-flex">
               Direkt per E-Mail
