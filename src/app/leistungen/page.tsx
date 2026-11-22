@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import { CtaBand } from "@/components/CtaBand";
 
 export const metadata: Metadata = {
   title: "Leistungen",
   description:
-    "IT-Support, Backup, Cyber Security, Microsoft 365, Arbeitsplätze und Web — persönliche IT-Betreuung aus der Nordwestschweiz.",
+    "IT-Support, Backup, Cyber Security, Microsoft 365, Arbeitsplätze und Web — persönliche IT-Betreuung aus Therwil und der Nordwestschweiz.",
 };
 
 const kmuServices = [
@@ -55,6 +56,7 @@ const kmuServices = [
 
 const otherServices = [
   {
+    id: "pc-service",
     title: "PC-Service",
     points: [
       "Reparieren statt wegwerfen",
@@ -63,10 +65,12 @@ const otherServices = [
     ],
   },
   {
+    id: "gaming",
     title: "Gaming-PCs",
-    points: ["Zusammenstellung", "Optimierung", "Support bei Problemen"],
+    points: ["Zusammenstellung nach Mass", "Optimierung", "Support bei Problemen"],
   },
   {
+    id: "webseiten",
     title: "Webseiten & Hosting",
     points: [
       "Firmen-, Vereins- und Privatseiten",
@@ -81,9 +85,9 @@ export default function LeistungenPage() {
   return (
     <>
       <PageHero
-        eyebrow="Leistungen"
+        eyebrow="Leistungen · Nordwestschweiz"
         title="IT-Lösungen, die den Betrieb schützen"
-        lead="Von Support und Backup bis Microsoft 365 und passende Arbeitsplätze — klar, persönlich und aus der Nordwestschweiz. Nicht alles möglich, sondern das, was Sie wirklich brauchen."
+        lead="Von Support und Backup bis Microsoft 365 und passende Arbeitsplätze — klar, persönlich und aus Therwil / Basel-Landschaft. Nicht alles möglich, sondern das, was Sie wirklich brauchen."
       />
 
       <section className="border-b border-white/10 bg-navy-800">
@@ -130,8 +134,9 @@ export default function LeistungenPage() {
           <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {otherServices.map((service) => (
               <article
+                id={service.id}
                 key={service.title}
-                className="rounded-lg border border-white/10 bg-white/[0.03] p-6"
+                className="scroll-mt-28 rounded-lg border border-white/10 bg-white/[0.03] p-6 transition hover:border-teal-500/40"
               >
                 <h3 className="font-display text-xl font-semibold text-white">{service.title}</h3>
                 <ul className="mt-4 space-y-2">
@@ -145,30 +150,45 @@ export default function LeistungenPage() {
               </article>
             ))}
           </div>
-        </div>
-      </section>
 
-      <section className="bg-navy-800">
-        <div className="container-narrow section-pad">
-          <div className="rounded-lg border border-teal-500/30 bg-teal-500/5 p-8 text-center sm:p-10">
-            <p className="font-display text-2xl font-semibold text-white">
-              Unsicher, was Sie brauchen?
-            </p>
-            <p className="mx-auto mt-3 max-w-xl text-sm text-slate-300">
-              Kurzes Gespräch reicht oft. Wir klären Risiko, Priorität und nächsten Schritt —
-              ohne Verkaufsdruck.
-            </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <Link href="/kontakt" className="btn-primary">
-                Beratung anfragen
-              </Link>
-              <Link href="/kmu" className="btn-secondary">
-                Für KMU ansehen
-              </Link>
-            </div>
+          <div className="mt-14">
+            <p className="text-sm font-semibold text-white">Lokale Themen (SEO-Vorbereitung)</p>
+            <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-400">
+              <li>
+                <Link href="/pc-reparatur-therwil" className="text-teal-400 hover:underline">
+                  PC-Reparatur Therwil
+                </Link>
+              </li>
+              <li>
+                <Link href="/gaming-pcs-nordwestschweiz" className="text-teal-400 hover:underline">
+                  Gaming-PCs NWS
+                </Link>
+              </li>
+              <li>
+                <Link href="/synology-nas-basel" className="text-teal-400 hover:underline">
+                  Synology NAS Basel
+                </Link>
+              </li>
+              <li>
+                <Link href="/microsoft-365-support-basel" className="text-teal-400 hover:underline">
+                  M365 Support Basel
+                </Link>
+              </li>
+              <li>
+                <Link href="/webseiten-kmu-basel" className="text-teal-400 hover:underline">
+                  Webseiten KMU Basel
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
+
+      <CtaBand
+        title="Unsicher, was Sie brauchen?"
+        lead="Kurzes Gespräch reicht oft. Wir klären Risiko, Priorität und nächsten Schritt — ohne Verkaufsdruck."
+        primaryLabel="Beratung anfragen"
+      />
     </>
   );
 }

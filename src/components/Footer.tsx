@@ -1,11 +1,22 @@
 import Link from "next/link";
 import { BrandLogo } from "@/components/BrandLogo";
+import {
+  CONTACT_ADDRESS_LINE,
+  CONTACT_EMAIL,
+  CONTACT_MAILTO,
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_TEL,
+  CONTACT_REGION,
+} from "@/lib/site";
+import { SEO_PAGES } from "@/lib/seo-pages";
+
+const seoLinks = SEO_PAGES.slice(0, 4);
 
 export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-navy-900">
       <div className="container-narrow section-pad !py-14">
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link href="/" aria-label="IT NWS – Startseite" className="inline-flex">
               <BrandLogo size="footer" />
@@ -19,29 +30,103 @@ export function Footer() {
           <div>
             <p className="text-sm font-semibold text-white">Seiten</p>
             <ul className="mt-3 space-y-2 text-sm text-slate-400">
-              <li><Link href="/leistungen" className="hover:text-teal-400">Leistungen</Link></li>
-              <li><Link href="/leistungen/it-support" className="hover:text-teal-400">IT-Support</Link></li>
-              <li><Link href="/leistungen/remote-support" className="hover:text-teal-400">Remote-Support</Link></li>
-              <li><Link href="/leistungen/backup-wiederherstellung" className="hover:text-teal-400">Backup</Link></li>
-              <li><Link href="/leistungen/cyber-security" className="hover:text-teal-400">Cyber Security</Link></li>
-              <li><Link href="/leistungen/microsoft-365" className="hover:text-teal-400">Microsoft 365</Link></li>
-              <li><Link href="/leistungen/hardware" className="hover:text-teal-400">Hardware & Arbeitsplätze</Link></li>
-              <li><Link href="/kmu" className="hover:text-teal-400">KMU</Link></li>
-              <li><Link href="/privatkunden" className="hover:text-teal-400">Privatkunden</Link></li>
-              <li><Link href="/kontakt" className="hover:text-teal-400">Kontakt</Link></li>
+              <li>
+                <Link href="/leistungen" className="hover:text-teal-400">
+                  Leistungen
+                </Link>
+              </li>
+              <li>
+                <Link href="/leistungen/it-support" className="hover:text-teal-400">
+                  IT-Support
+                </Link>
+              </li>
+              <li>
+                <Link href="/leistungen/remote-support" className="hover:text-teal-400">
+                  Remote-Support
+                </Link>
+              </li>
+              <li>
+                <Link href="/leistungen/backup-wiederherstellung" className="hover:text-teal-400">
+                  Backup
+                </Link>
+              </li>
+              <li>
+                <Link href="/leistungen/cyber-security" className="hover:text-teal-400">
+                  Cyber Security
+                </Link>
+              </li>
+              <li>
+                <Link href="/leistungen/microsoft-365" className="hover:text-teal-400">
+                  Microsoft 365
+                </Link>
+              </li>
+              <li>
+                <Link href="/leistungen/hardware" className="hover:text-teal-400">
+                  Hardware & Arbeitsplätze
+                </Link>
+              </li>
+              <li>
+                <Link href="/kmu" className="hover:text-teal-400">
+                  KMU
+                </Link>
+              </li>
+              <li>
+                <Link href="/privatkunden" className="hover:text-teal-400">
+                  Privatkunden
+                </Link>
+              </li>
+              <li>
+                <Link href="/kontakt" className="hover:text-teal-400">
+                  Kontakt
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
-            <p className="text-sm font-semibold text-white">Rechtliches</p>
+            <p className="text-sm font-semibold text-white">Region & Themen</p>
             <ul className="mt-3 space-y-2 text-sm text-slate-400">
-              <li><Link href="/impressum" className="hover:text-teal-400">Impressum</Link></li>
-              <li><Link href="/datenschutz" className="hover:text-teal-400">Datenschutz</Link></li>
+              {seoLinks.map((page) => (
+                <li key={page.slug}>
+                  <Link href={`/${page.slug}`} className="hover:text-teal-400">
+                    {page.title}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/it-support-kmu-nordwestschweiz" className="hover:text-teal-400">
+                  IT-Support KMU NWS
+                </Link>
+              </li>
             </ul>
-            <p className="mt-6 text-sm text-slate-500">
-              Region Nordwestschweiz ·{" "}
-              <span className="text-slate-400">[TODO: E-Mail]</span>
-            </p>
+          </div>
+
+          <div>
+            <p className="text-sm font-semibold text-white">Kontakt & Rechtliches</p>
+            <ul className="mt-3 space-y-2 text-sm text-slate-400">
+              <li>
+                <a href={CONTACT_MAILTO} className="hover:text-teal-400">
+                  {CONTACT_EMAIL}
+                </a>
+              </li>
+              <li>
+                <a href={CONTACT_PHONE_TEL} className="hover:text-teal-400">
+                  {CONTACT_PHONE_DISPLAY}
+                </a>
+              </li>
+              <li>{CONTACT_ADDRESS_LINE}</li>
+              <li className="text-slate-500">{CONTACT_REGION}</li>
+              <li className="pt-2">
+                <Link href="/impressum" className="hover:text-teal-400">
+                  Impressum
+                </Link>
+              </li>
+              <li>
+                <Link href="/datenschutz" className="hover:text-teal-400">
+                  Datenschutz
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 
