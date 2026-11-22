@@ -19,7 +19,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "IT NWS – IT mit Sicherheitsnetz.",
+    default: "IT NWS – Persönliche IT. Persönlich erreichbar.",
     template: "%s | IT NWS",
   },
   description:
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "Datensicherung Schweiz",
   ],
   openGraph: {
-    title: "IT NWS – IT mit Sicherheitsnetz.",
+    title: "IT NWS – Persönliche IT. Persönlich erreichbar.",
     description:
       "Lokaler IT-Partner in Therwil für Privatkunden, Vereine und KMU in Basel und der Nordwestschweiz.",
     locale: "de_CH",
