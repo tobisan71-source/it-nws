@@ -201,7 +201,7 @@ export const SEO_PAGES: SeoPageDef[] = [
     related: [
       { href: "/leistungen", label: "Leistungen" },
       { href: "/kmu", label: "KMU" },
-      { href: "/kontakt", label: "Projekt besprechen" },
+      { href: "/kontakt", label: "Beratung anfragen" },
     ],
   },
 ];

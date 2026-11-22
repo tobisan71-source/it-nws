@@ -85,7 +85,7 @@ const content: ServiceDetailContent = {
       a: "Besonders für KMU, Selbständige und Vereine ohne eigene IT-Abteilung — in Therwil, Basel und der Nordwestschweiz.",
     },
   ],
-  ctaLabel: "Arbeitsplatz-Bedarf besprechen",
+  ctaLabel: "Beratung anfragen",
   ctaHref: "/kontakt",
 };
 
