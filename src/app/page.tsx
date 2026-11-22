@@ -16,12 +16,6 @@ import {
 
 const deviceCards = [
   {
-    title: "Gaming-PCs",
-    text: "Gaming-PCs nach Mass: Beratung, Zusammenstellung und Support — kein anonymer Shop.",
-    href: "/leistungen#gaming-pcs",
-    icon: IconGamepad,
-  },
-  {
     title: "Notebooks",
     text: "Auswahl, Einrichtung und Begleitung für mobiles Arbeiten — persönlich und verständlich.",
     href: "/leistungen#notebooks",
@@ -62,6 +56,12 @@ const deviceCards = [
     text: "Geschäftliche E-Mail zuverlässig nutzen — Zugänge, Sicherheit und Support ohne Hotline-Chaos.",
     href: "/leistungen#e-mail",
     icon: IconMail,
+  },
+  {
+    title: "Gaming-PCs",
+    text: "Gaming-PCs nach Mass: Beratung, Zusammenstellung und Support — kein anonymer Shop.",
+    href: "/leistungen#gaming-pcs",
+    icon: IconGamepad,
   },
 ];
 

@@ -21,12 +21,6 @@ export const metadata: Metadata = {
 
 const deviceCards = [
   {
-    id: "gaming-pcs",
-    title: "Gaming-PCs",
-    text: "Beratung, Zusammenstellung und Support nach Mass — kein anonymer Shop.",
-    icon: IconGamepad,
-  },
-  {
     id: "notebooks",
     title: "Notebooks",
     text: "Auswahl, Einrichtung und Begleitung für mobiles Arbeiten — persönlich und verständlich.",
@@ -67,6 +61,12 @@ const deviceCards = [
     title: "E-Mail",
     text: "Geschäftliche E-Mail zuverlässig nutzen — Zugänge, Sicherheit und Support ohne Hotline-Chaos.",
     icon: IconMail,
+  },
+  {
+    id: "gaming-pcs",
+    title: "Gaming-PCs",
+    text: "Beratung, Zusammenstellung und Support nach Mass — kein anonymer Shop.",
+    icon: IconGamepad,
   },
 ];
 
