@@ -6,11 +6,11 @@ import {
   IconDesktop,
   IconGamepad,
   IconGlobe,
+  IconHardware,
   IconHosting,
   IconLaptop,
   IconMail,
   IconServer,
-  IconTablet,
 } from "@/components/ServiceIcons";
 
 export const metadata: Metadata = {
@@ -21,22 +21,22 @@ export const metadata: Metadata = {
 
 const deviceCards = [
   {
-    id: "notebooks",
-    title: "Notebooks",
-    text: "Auswahl, Einrichtung und Begleitung für mobiles Arbeiten — persönlich und verständlich.",
+    id: "notebooks-tablets",
+    title: "Notebooks & Tablets",
+    text: "Auswahl, Einrichtung, Datensicherheit und Alltagshilfe für mobiles Arbeiten — persönlich und verständlich.",
     icon: IconLaptop,
-  },
-  {
-    id: "tablets",
-    title: "Tablets",
-    text: "Einrichtung, Datensicherheit und Alltagshilfe — damit Apps und Daten zuverlässig laufen.",
-    icon: IconTablet,
   },
   {
     id: "arbeitsplaetze",
     title: "PCs & Arbeitsplätze",
     text: "Arbeitsplatz einrichten, Daten übernehmen, Grundschutz — damit Sie produktiv starten.",
     icon: IconDesktop,
+  },
+  {
+    id: "hardware-verkauf",
+    title: "Hardware-Verkauf",
+    text: "Komponenten, Software, Hardware und Ersatzteile — mit Beratung statt Shop-Feeling.",
+    icon: IconHardware,
   },
   {
     id: "hosting",
@@ -46,7 +46,7 @@ const deviceCards = [
   },
   {
     id: "server",
-    title: "Server",
+    title: "Server & NAS",
     text: "Server und NAS mit Überblick: Einrichtung, Sicherung und Hilfe, wenn etwas hakt.",
     icon: IconServer,
   },
@@ -65,54 +65,24 @@ const deviceCards = [
   {
     id: "gaming-pcs",
     title: "Gaming-PCs",
-    text: "Beratung, Zusammenstellung und Support nach Mass — kein anonymer Shop.",
+    text: "Beratung, Zusammenstellung und Support nach Mass.",
     icon: IconGamepad,
   },
 ];
 
 const deviceDetails = [
   {
-    id: "gaming-pcs",
-    eyebrow: "Premium · Beratung",
-    title: "Gaming-PCs nach Mass",
-    lead: "Kein Shop-Regal, keine Bundle-Nummer. Wir klären Spiele, Budget, Lautstärke und Upgrade-Pfad — und stellen einen Rechner zusammen, der zu Ihnen passt. Danach bleiben Sie erreichbar betreut: aus der Nordwestschweiz.",
-    points: [
-      "Zusammenstellung nach Bedarf statt Katalog",
-      "Transparente Komponenten-Empfehlung",
-      "Setup, Treiber und Grundschutz",
-      "Persönlicher Support nach der Übergabe",
-    ],
-    cta: "Gaming-PC besprechen",
-    secondaryHref: "/gaming-pcs-nordwestschweiz",
-    secondaryLabel: "Mehr erfahren",
-  },
-  {
-    id: "notebooks",
+    id: "notebooks-tablets",
     eyebrow: "Mobil · Beratung",
-    title: "Notebooks, die zum Alltag passen",
-    lead: "Ob Homeoffice, Studium oder unterwegs: Wir helfen bei der Auswahl, richten ein und erklären verständlich — ohne Verkaufsdruck und ohne Technik-Jargon.",
+    title: "Notebooks & Tablets für den Alltag",
+    lead: "Ob Homeoffice, Studium oder unterwegs: Wir helfen bei Auswahl und Einrichtung, achten auf Datensicherheit und erklären verständlich — persönlich statt Hotline.",
     points: [
       "Bedarf und Budget gemeinsam klären",
       "Datenübertragung vom alten Gerät",
       "Einrichtung, Updates und Grundschutz",
-      "Support, wenn etwas hakt",
+      "Alltagshilfe für Apps, Zugänge und Sicherung",
     ],
-    cta: "Notebook besprechen",
-    secondaryHref: "/kontakt#termin",
-    secondaryLabel: "Termin anfragen",
-  },
-  {
-    id: "tablets",
-    eyebrow: "Alltag · Einrichtung",
-    title: "Tablets sicher und alltagstauglich",
-    lead: "Neues Tablet, Familienzugänge oder unsichere Apps? Wir richten ein, sichern Zugänge und zeigen die wichtigsten Schritte — persönlich statt Hotline.",
-    points: [
-      "Einrichtung und sinnvolle Einstellungen",
-      "Konten, Passwörter und Grundschutz",
-      "Daten und Fotos sinnvoll sichern",
-      "Kurze Einführung für den Alltag",
-    ],
-    cta: "Tablet besprechen",
+    cta: "Gerät besprechen",
     secondaryHref: "/kontakt#termin",
     secondaryLabel: "Termin anfragen",
   },
@@ -128,6 +98,21 @@ const deviceDetails = [
       "Persönlicher Ansprechpartner danach",
     ],
     cta: "Arbeitsplatz besprechen",
+    secondaryHref: "/leistungen/hardware",
+    secondaryLabel: "Hardware-Details",
+  },
+  {
+    id: "hardware-verkauf",
+    eyebrow: "Beschaffung · Beratung",
+    title: "Hardware-Verkauf mit Beratung",
+    lead: "Komponenten, Software, Hardware und Ersatzteile: Wir empfehlen, was zu Ihrem Bedarf passt — ohne Katalog-Druck und mit jemandem, den Sie danach noch erreichen.",
+    points: [
+      "Hardware-Komponenten nach Bedarf",
+      "Software und Hardware mit klarer Empfehlung",
+      "Ersatzteile, die wirklich passen",
+      "Persönliche Beratung statt Katalog-Druck",
+    ],
+    cta: "Hardware besprechen",
     secondaryHref: "/leistungen/hardware",
     secondaryLabel: "Hardware-Details",
   },
@@ -190,6 +175,21 @@ const deviceDetails = [
     cta: "E-Mail besprechen",
     secondaryHref: "/leistungen/microsoft-365",
     secondaryLabel: "Microsoft 365",
+  },
+  {
+    id: "gaming-pcs",
+    eyebrow: "Premium · Beratung",
+    title: "Gaming-PCs nach Mass",
+    lead: "Wir klären Spiele, Budget, Lautstärke und Upgrade-Pfad — und stellen einen Rechner zusammen, der zu Ihnen passt. Danach bleiben Sie erreichbar betreut: aus der Nordwestschweiz.",
+    points: [
+      "Zusammenstellung nach Bedarf statt Katalog",
+      "Transparente Komponenten-Empfehlung",
+      "Setup, Treiber und Grundschutz",
+      "Persönlicher Support nach der Übergabe",
+    ],
+    cta: "Gaming-PC besprechen",
+    secondaryHref: "/gaming-pcs-nordwestschweiz",
+    secondaryLabel: "Mehr erfahren",
   },
 ];
 
