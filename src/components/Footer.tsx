@@ -20,6 +20,12 @@ export function Footer() {
             <p className="text-sm font-semibold text-white">Seiten</p>
             <ul className="mt-3 space-y-2 text-sm text-slate-400">
               <li><Link href="/leistungen" className="hover:text-teal-400">Leistungen</Link></li>
+              <li><Link href="/leistungen/it-support" className="hover:text-teal-400">IT-Support</Link></li>
+              <li><Link href="/leistungen/remote-support" className="hover:text-teal-400">Remote-Support</Link></li>
+              <li><Link href="/leistungen/backup-wiederherstellung" className="hover:text-teal-400">Backup</Link></li>
+              <li><Link href="/leistungen/cyber-security" className="hover:text-teal-400">Cyber Security</Link></li>
+              <li><Link href="/leistungen/microsoft-365" className="hover:text-teal-400">Microsoft 365</Link></li>
+              <li><Link href="/leistungen/hardware" className="hover:text-teal-400">Hardware & Arbeitsplätze</Link></li>
               <li><Link href="/kmu" className="hover:text-teal-400">KMU</Link></li>
               <li><Link href="/privatkunden" className="hover:text-teal-400">Privatkunden</Link></li>
               <li><Link href="/kontakt" className="hover:text-teal-400">Kontakt</Link></li>
