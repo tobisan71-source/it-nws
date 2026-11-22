@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ServiceDetail, type ServiceDetailContent } from "@/components/ServiceDetail";
 
 export const metadata: Metadata = {
-  title: "Backup & Wiederherstellung für KMU | IT NWS Therwil",
+  title: "Backup & Wiederherstellung für KMU",
   description:
-    "Datensicherung mit Prüfungen und Wiederherstellung — damit Ihre Firmendaten nach Ausfall oder Angriff wieder verfügbar sind.",
+    "Datensicherung mit Prüfungen und Wiederherstellung für KMU in Therwil und der Nordwestschweiz — damit Firmendaten nach Ausfall oder Angriff wieder verfügbar sind.",
 };
 
 const content: ServiceDetailContent = {

@@ -4,7 +4,7 @@ import { ServiceDetail, type ServiceDetailContent } from "@/components/ServiceDe
 export const metadata: Metadata = {
   title: "Microsoft 365 für KMU Basel & Region",
   description:
-    "Microsoft 365 verständlich und sicher für KMU. Persönliche Betreuung aus Therwil — damit Kommunikation und Dateien im Griff bleiben.",
+    "Microsoft 365 verständlich und sicher für KMU in Basel und der Region: E-Mail, Teams, Zugänge und Backup — persönliche Betreuung aus Therwil.",
 };
 
 const content: ServiceDetailContent = {

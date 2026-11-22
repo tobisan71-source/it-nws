@@ -10,8 +10,9 @@ import {
 } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Datenschutz",
-  description: "Datenschutzerklärung von IT NWS.",
+  title: "Datenschutzerklärung",
+  description:
+    "Datenschutzerklärung von IT NWS: wie wir Kontaktdaten, Website-Zugriffe und Anfragen in der Schweiz verarbeiten und schützen.",
   robots: { index: false, follow: true },
 };
 

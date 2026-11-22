@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ServiceDetail, type ServiceDetailContent } from "@/components/ServiceDetail";
 
 export const metadata: Metadata = {
-  title: "Remote-Support für KMU | IT NWS Nordwestschweiz",
+  title: "Remote-Support für KMU",
   description:
-    "Schnelle IT-Hilfe aus der Ferne für KMU — persönlicher Ansprechpartner statt Hotline. Damit Störungen den Betrieb nicht unnötig lange stoppen.",
+    "Schnelle IT-Hilfe aus der Ferne für KMU in der Nordwestschweiz — persönlicher Ansprechpartner statt Hotline, damit Störungen den Betrieb nicht unnötig lange stoppen.",
 };
 
 const content: ServiceDetailContent = {

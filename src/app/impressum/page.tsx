@@ -13,7 +13,8 @@ import {
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Impressum von IT NWS — Kontaktdaten und Angaben gemäss Schweizer Recht.",
+  description:
+    "Impressum von IT NWS (Tobias Leiss, Therwil): Kontaktdaten, Adresse und Angaben gemäss Schweizer Recht.",
   robots: { index: false, follow: true },
 };
 

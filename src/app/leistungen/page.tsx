@@ -14,9 +14,9 @@ import {
 } from "@/components/ServiceIcons";
 
 export const metadata: Metadata = {
-  title: "Leistungen",
+  title: "Leistungen: IT-Support, Backup & mehr",
   description:
-    "IT-Support, Backup, Cyber Security, Microsoft 365, Geräte und Web — persönliche IT-Betreuung aus Therwil und der Nordwestschweiz.",
+    "Alle Leistungen von IT NWS: IT-Support, Remote-Hilfe, Backup, Cyber Security, Microsoft 365, Geräte und Web — persönlich aus Therwil und der Nordwestschweiz.",
 };
 
 const deviceCards = [
