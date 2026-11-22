@@ -102,3 +102,52 @@ export function IconDesktop({ className = "h-6 w-6" }: IconProps) {
     </svg>
   );
 }
+
+export function IconHosting({ className = "h-6 w-6" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path
+        d="M6.5 16.5h11a3.5 3.5 0 0 0 .4-7 5 5 0 0 0-9.7-1.4A3.5 3.5 0 0 0 6.5 16.5Z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M9 19.5h6"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+export function IconServer({ className = "h-6 w-6" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <rect x="4" y="3.5" width="16" height="6" rx="1.5" stroke="currentColor" strokeWidth="1.6" />
+      <rect x="4" y="11.5" width="16" height="6" rx="1.5" stroke="currentColor" strokeWidth="1.6" />
+      <path
+        d="M7 6.5h.01M7 14.5h.01M10 6.5h4M10 14.5h4M12 17.5v2M9.5 19.5h5"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+export function IconMail({ className = "h-6 w-6" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <rect x="3" y="5.5" width="18" height="13" rx="1.5" stroke="currentColor" strokeWidth="1.6" />
+      <path
+        d="m4.5 7.5 7.5 5.5 7.5-5.5"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}

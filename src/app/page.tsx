@@ -7,7 +7,10 @@ import {
   IconGamepad,
   IconGlobe,
   IconHome,
+  IconHosting,
   IconLaptop,
+  IconMail,
+  IconServer,
   IconTablet,
 } from "@/components/ServiceIcons";
 
@@ -35,6 +38,30 @@ const deviceCards = [
     text: "Arbeitsplatz einrichten, Daten übernehmen, Grundschutz — damit Sie produktiv starten.",
     href: "/leistungen#arbeitsplaetze",
     icon: IconDesktop,
+  },
+  {
+    title: "Hosting",
+    text: "Hosting mit Ansprechpartner: Domain, SSL und Backup — damit Ihre Website erreichbar bleibt.",
+    href: "/leistungen#hosting",
+    icon: IconHosting,
+  },
+  {
+    title: "Server",
+    text: "Server und NAS mit Überblick: Einrichtung, Sicherung und Hilfe, wenn etwas hakt.",
+    href: "/leistungen#server",
+    icon: IconServer,
+  },
+  {
+    title: "Webseitenbetreuung",
+    text: "Webseiten pflegen und aktuell halten — Updates, Sicherheit und jemand, den Sie erreichen.",
+    href: "/leistungen#webseitenbetreuung",
+    icon: IconGlobe,
+  },
+  {
+    title: "E-Mail",
+    text: "Geschäftliche E-Mail zuverlässig nutzen — Zugänge, Sicherheit und Support ohne Hotline-Chaos.",
+    href: "/leistungen#e-mail",
+    icon: IconMail,
   },
 ];
 
@@ -164,13 +191,13 @@ export default function HomePage() {
 
       <section id="geraete" className="scroll-mt-24 border-b border-white/10 bg-navy-900">
         <div className="container-narrow section-pad">
-          <p className="eyebrow">Geräte</p>
+          <p className="eyebrow">Geräte & Services</p>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold text-white sm:text-4xl">
-            Geräte & persönliche Beratung
+            Geräte, Hosting & persönliche Beratung
           </h2>
           <p className="mt-4 max-w-2xl text-slate-300">
-            Gaming-PCs, Notebooks, Tablets und Arbeitsplätze — Beratung, Einrichtung und Support,
-            kein Hardware-Verkauf von der Stange.
+            Gaming-PCs, Notebooks, Tablets und Arbeitsplätze — plus Hosting, Server,
+            Webseitenbetreuung und E-Mail. Beratung, Einrichtung und Support, kein Angebot von der Stange.
           </p>
           <div className="mt-12 grid gap-5 sm:grid-cols-2">
             {deviceCards.map((item) => {

@@ -5,7 +5,11 @@ import { CtaBand } from "@/components/CtaBand";
 import {
   IconDesktop,
   IconGamepad,
+  IconGlobe,
+  IconHosting,
   IconLaptop,
+  IconMail,
+  IconServer,
   IconTablet,
 } from "@/components/ServiceIcons";
 
@@ -40,6 +44,30 @@ const deviceCards = [
     text: "Arbeitsplatz einrichten, Daten übernehmen, Grundschutz — damit Sie produktiv starten.",
     icon: IconDesktop,
   },
+  {
+    id: "hosting",
+    title: "Hosting",
+    text: "Hosting mit Ansprechpartner: Domain, SSL und Backup — damit Ihre Website erreichbar bleibt.",
+    icon: IconHosting,
+  },
+  {
+    id: "server",
+    title: "Server",
+    text: "Server und NAS mit Überblick: Einrichtung, Sicherung und Hilfe, wenn etwas hakt.",
+    icon: IconServer,
+  },
+  {
+    id: "webseitenbetreuung",
+    title: "Webseitenbetreuung",
+    text: "Webseiten pflegen und aktuell halten — Updates, Sicherheit und jemand, den Sie erreichen.",
+    icon: IconGlobe,
+  },
+  {
+    id: "e-mail",
+    title: "E-Mail",
+    text: "Geschäftliche E-Mail zuverlässig nutzen — Zugänge, Sicherheit und Support ohne Hotline-Chaos.",
+    icon: IconMail,
+  },
 ];
 
 const deviceDetails = [
@@ -55,6 +83,8 @@ const deviceDetails = [
       "Persönlicher Support nach der Übergabe",
     ],
     cta: "Gaming-PC besprechen",
+    secondaryHref: "/gaming-pcs-nordwestschweiz",
+    secondaryLabel: "Mehr erfahren",
   },
   {
     id: "notebooks",
@@ -68,6 +98,8 @@ const deviceDetails = [
       "Support, wenn etwas hakt",
     ],
     cta: "Notebook besprechen",
+    secondaryHref: "/kontakt#termin",
+    secondaryLabel: "Termin anfragen",
   },
   {
     id: "tablets",
@@ -81,6 +113,8 @@ const deviceDetails = [
       "Kurze Einführung für den Alltag",
     ],
     cta: "Tablet besprechen",
+    secondaryHref: "/kontakt#termin",
+    secondaryLabel: "Termin anfragen",
   },
   {
     id: "arbeitsplaetze",
@@ -94,6 +128,68 @@ const deviceDetails = [
       "Persönlicher Ansprechpartner danach",
     ],
     cta: "Arbeitsplatz besprechen",
+    secondaryHref: "/leistungen/hardware",
+    secondaryLabel: "Hardware-Details",
+  },
+  {
+    id: "hosting",
+    eyebrow: "Web · Hosting",
+    title: "Hosting, bei dem Sie jemanden erreichen",
+    lead: "Eine Website, die offline ist oder unsicher läuft, kostet Anfragen und Vertrauen. Wir kümmern uns um Betrieb, SSL und Sicherung — mit direktem Ansprechpartner statt Ticket-Wall.",
+    points: [
+      "Domain, SSL und sichere Verbindungen",
+      "Backup der Webpräsenz",
+      "Updates und Erreichbarkeit im Blick",
+      "Persönliche Hilfe bei Störungen",
+    ],
+    cta: "Hosting besprechen",
+    secondaryHref: "/webseiten-kmu-basel",
+    secondaryLabel: "Webseiten KMU Basel",
+  },
+  {
+    id: "server",
+    eyebrow: "Infrastruktur · NAS",
+    title: "Server und NAS unter Kontrolle",
+    lead: "Ob Firmenfreigaben, lokale Sicherung oder ein NAS zu Hause: Wir planen, richten ein und bleiben erreichbar — damit Ihre Daten und Dienste nicht «plötzlich» ausfallen.",
+    points: [
+      "Einrichtung und sinnvolle Struktur",
+      "Backup und Wiederherstellung mitdenken",
+      "Zugänge und Rechte nachvollziehbar",
+      "Support, wenn Speicher oder Dienste haken",
+    ],
+    cta: "Server/NAS besprechen",
+    secondaryHref: "/synology-nas-basel",
+    secondaryLabel: "Synology NAS Basel",
+  },
+  {
+    id: "webseitenbetreuung",
+    eyebrow: "Web · Betreuung",
+    title: "Webseitenbetreuung ohne Pflege-Chaos",
+    lead: "Viele Seiten sind online, aber niemand hält sie aktuell. Wir pflegen Inhalte, Sicherheit und Kontaktwege — damit Besucher Sie finden und Sie erreichbar bleiben.",
+    points: [
+      "Updates und Sicherheits-Pflege",
+      "Inhalte und Kontaktwege funktionsfähig halten",
+      "Schlanke, wartbare Auftritte",
+      "Ansprechpartner in der Nordwestschweiz",
+    ],
+    cta: "Website besprechen",
+    secondaryHref: "/webseiten-kmu-basel",
+    secondaryLabel: "Webseiten KMU Basel",
+  },
+  {
+    id: "e-mail",
+    eyebrow: "Kommunikation · Microsoft 365",
+    title: "E-Mail, auf die Sie sich verlassen",
+    lead: "Geschäftliche E-Mail soll ankommen, sicher sein und ohne Chaos funktionieren. Wir helfen bei Zugängen, Einrichtung und Störungen — persönlich statt anonymer Hotline.",
+    points: [
+      "Zuverlässige E-Mail-Nutzung im Alltag",
+      "Zugänge und Rechte im Griff",
+      "Grundschutz ohne Überforderung",
+      "Support bei Ausfällen und Fehlermeldungen",
+    ],
+    cta: "E-Mail besprechen",
+    secondaryHref: "/leistungen/microsoft-365",
+    secondaryLabel: "Microsoft 365",
   },
 ];
 
@@ -180,13 +276,13 @@ export default function LeistungenPage() {
 
       <section className="border-b border-white/10 bg-navy-800">
         <div className="container-narrow section-pad">
-          <p className="eyebrow">Geräte & Beratung</p>
+          <p className="eyebrow">Geräte & Services</p>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold text-white sm:text-4xl">
-            Gaming-PCs, Notebooks, Tablets & Arbeitsplätze
+            Geräte, Hosting, Server & Web
           </h2>
           <p className="mt-4 max-w-2xl text-slate-300">
-            Wir verkaufen keine Hardware von der Stange. Wir beraten, richten ein und bleiben
-            erreichbar — damit Ihr Gerät zuverlässig zum Alltag passt.
+            Wir verkaufen nichts von der Stange. Wir beraten, richten ein und bleiben erreichbar —
+            für Geräte ebenso wie für Hosting, Server, Webseitenbetreuung und E-Mail.
           </p>
           <div className="mt-12 grid gap-5 sm:grid-cols-2">
             {deviceCards.map((item) => {
@@ -233,8 +329,8 @@ export default function LeistungenPage() {
                 <Link href="/kontakt" className="btn-primary">
                   {detail.cta}
                 </Link>
-                <Link href="/kontakt#termin" className="btn-secondary">
-                  Termin anfragen
+                <Link href={detail.secondaryHref} className="btn-secondary">
+                  {detail.secondaryLabel}
                 </Link>
               </div>
             </div>
