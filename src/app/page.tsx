@@ -7,28 +7,22 @@ import {
   IconDesktop,
   IconGamepad,
   IconGlobe,
+  IconHardware,
   IconHome,
   IconHosting,
   IconLaptop,
   IconMail,
   IconServer,
-  IconTablet,
 } from "@/components/ServiceIcons";
 import { OWNER_NAME } from "@/lib/site";
 
 
 const deviceCards = [
   {
-    title: "Notebooks",
-    text: "Auswahl, Einrichtung und Begleitung für mobiles Arbeiten — persönlich und verständlich.",
-    href: "/leistungen#notebooks",
+    title: "Notebooks & Tablets",
+    text: "Auswahl, Einrichtung, Datensicherheit und Alltagshilfe für mobiles Arbeiten — persönlich und verständlich.",
+    href: "/leistungen#notebooks-tablets",
     icon: IconLaptop,
-  },
-  {
-    title: "Tablets",
-    text: "Einrichtung, Datensicherheit und Alltagshilfe — damit Apps und Daten zuverlässig laufen.",
-    href: "/leistungen#tablets",
-    icon: IconTablet,
   },
   {
     title: "PCs & Arbeitsplätze",
@@ -37,13 +31,19 @@ const deviceCards = [
     icon: IconDesktop,
   },
   {
+    title: "Hardware-Verkauf",
+    text: "Komponenten, Software, Hardware und Ersatzteile — mit Beratung statt Shop-Feeling.",
+    href: "/leistungen#hardware-verkauf",
+    icon: IconHardware,
+  },
+  {
     title: "Hosting",
     text: "Hosting mit Ansprechpartner: Domain, SSL und Backup — damit Ihre Website erreichbar bleibt.",
     href: "/leistungen#hosting",
     icon: IconHosting,
   },
   {
-    title: "Server",
+    title: "Server & NAS",
     text: "Server und NAS mit Überblick: Einrichtung, Sicherung und Hilfe, wenn etwas hakt.",
     href: "/leistungen#server",
     icon: IconServer,
@@ -62,7 +62,7 @@ const deviceCards = [
   },
   {
     title: "Gaming-PCs",
-    text: "Gaming-PCs nach Mass: Beratung, Zusammenstellung und Support — kein anonymer Shop.",
+    text: "Gaming-PCs nach Mass: Beratung, Zusammenstellung und Support.",
     href: "/leistungen#gaming-pcs",
     icon: IconGamepad,
   },
@@ -77,7 +77,7 @@ const leistungen = [
   },
   {
     title: "Gaming-PCs",
-    text: "Gaming-PCs nach Mass: Beratung, Zusammenstellung und Support — kein anonymer Shop.",
+    text: "Gaming-PCs nach Mass: Beratung, Zusammenstellung und Support.",
     href: "/leistungen#gaming-pcs",
     icon: IconGamepad,
   },
@@ -199,8 +199,8 @@ export default function HomePage() {
             Geräte, Hosting & persönliche Beratung
           </h2>
           <p className="mt-4 max-w-2xl text-slate-300">
-            Gaming-PCs, Notebooks, Tablets und Arbeitsplätze — plus Hosting, Server,
-            Webseitenbetreuung und E-Mail. Beratung, Einrichtung und Support, kein Angebot von der Stange.
+            Notebooks & Tablets, Arbeitsplätze, Hardware-Verkauf und Gaming-PCs — plus Hosting,
+            Server, Webseitenbetreuung und E-Mail. Beratung, Einrichtung und Support, kein Angebot von der Stange.
           </p>
           <div className="mt-12 grid gap-5 sm:grid-cols-2">
             {deviceCards.map((item) => {

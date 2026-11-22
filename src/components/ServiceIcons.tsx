@@ -151,3 +151,18 @@ export function IconMail({ className = "h-6 w-6" }: IconProps) {
     </svg>
   );
 }
+
+export function IconHardware({ className = "h-6 w-6" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" strokeWidth="1.6" />
+      <path
+        d="M9 4v2.5M15 4v2.5M9 17.5V20M15 17.5V20M4 9h2.5M4 15h2.5M17.5 9H20M17.5 15H20"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+      <rect x="8.5" y="8.5" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="1.6" />
+    </svg>
+  );
+}

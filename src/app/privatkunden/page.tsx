@@ -75,7 +75,7 @@ export default function PrivatkundenPage() {
               <Link href="/datensicherung-basel" className="btn-secondary">
                 Datensicherung Basel
               </Link>
-              <Link href="/leistungen#notebooks" className="btn-secondary">
+              <Link href="/leistungen#notebooks-tablets" className="btn-secondary">
                 Geräte-Leistungen
               </Link>
             </div>
