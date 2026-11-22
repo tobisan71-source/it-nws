@@ -16,3 +16,6 @@ export const CONTACT_ADDRESS_LINE = `${CONTACT_STREET}, ${CONTACT_ZIP_CITY}`;
 
 export const SITE_NAME = "IT NWS";
 export const SITE_TAGLINE = "Cloud mit Sicherheitsnetz.";
+/** Inhaber / persönlicher Ansprechpartner */
+export const OWNER_NAME = "Tobias Leiss";
+
