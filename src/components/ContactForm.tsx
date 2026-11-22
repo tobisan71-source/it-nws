@@ -23,8 +23,12 @@ export function ContactForm({ initialMode = "kontakt" }: Props) {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [preferredSlot, setPreferredSlot] = useState("");
+  /** Honeypot — leave empty; bots often fill it */
+  const [website, setWebsite] = useState("");
   const [errors, setErrors] = useState<Errors>({});
+  const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [formError, setFormError] = useState<string | null>(null);
 
   useEffect(() => {
     setMode(initialMode);
@@ -58,12 +62,62 @@ export function ContactForm({ initialMode = "kontakt" }: Props) {
     return next;
   }
 
-  function onSubmit(e: FormEvent) {
+  function resetFields() {
+    setName("");
+    setCompany("");
+    setEmail("");
+    setPhone("");
+    setMessage("");
+    setPreferredSlot("");
+    setWebsite("");
+    setErrors({});
+    setFormError(null);
+  }
+
+  async function onSubmit(e: FormEvent) {
     e.preventDefault();
+    setFormError(null);
     const next = validate();
     setErrors(next);
     if (Object.keys(next).length > 0) return;
-    setSubmitted(true);
+
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          mode,
+          name: name.trim(),
+          company: company.trim(),
+          email: email.trim(),
+          phone: phone.trim(),
+          message: message.trim(),
+          preferredSlot: preferredSlot.trim(),
+          website,
+        }),
+      });
+
+      const data = (await res.json().catch(() => null)) as
+        | { ok?: boolean; error?: string }
+        | null;
+
+      if (!res.ok || !data?.ok) {
+        setFormError(
+          data?.error ||
+            `Senden fehlgeschlagen. Bitte schreiben Sie direkt an ${CONTACT_EMAIL}.`,
+        );
+        return;
+      }
+
+      setSubmitted(true);
+    } catch {
+      setFormError(
+        `Netzwerkfehler beim Senden. Bitte prüfen Sie die Verbindung oder schreiben Sie direkt an ${CONTACT_EMAIL}.`,
+      );
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (submitted) {
@@ -73,28 +127,21 @@ export function ContactForm({ initialMode = "kontakt" }: Props) {
         role="status"
       >
         <p className="font-display text-xl font-semibold text-white">
-          {mode === "termin" ? "Terminanfrage erhalten" : "Nachricht erhalten"}
+          {mode === "termin" ? "Terminanfrage gesendet" : "Nachricht gesendet"}
         </p>
         <p className="mt-3 text-sm leading-relaxed text-slate-300">
-          Danke, {name.trim()}. Dies ist eine Demo ohne Backend — Ihre Angaben wurden
-          nicht übermittelt. Später wird hier die echte Zustellung an{" "}
+          Danke, {name.trim()}. Ihre Anfrage wurde an{" "}
           <a href={CONTACT_MAILTO} className="text-teal-400 hover:underline">
             {CONTACT_EMAIL}
           </a>{" "}
-          angebunden.
+          übermittelt. Wir melden uns in der Regel innerhalb eines Werktags.
         </p>
         <button
           type="button"
           className="btn-secondary mt-6"
           onClick={() => {
             setSubmitted(false);
-            setName("");
-            setCompany("");
-            setEmail("");
-            setPhone("");
-            setMessage("");
-            setPreferredSlot("");
-            setErrors({});
+            resetFields();
           }}
         >
           Neue Anfrage
@@ -118,6 +165,7 @@ export function ContactForm({ initialMode = "kontakt" }: Props) {
           onClick={() => {
             setMode("kontakt");
             setErrors({});
+            setFormError(null);
           }}
         >
           Nachricht senden
@@ -135,6 +183,7 @@ export function ContactForm({ initialMode = "kontakt" }: Props) {
           onClick={() => {
             setMode("termin");
             setErrors({});
+            setFormError(null);
           }}
         >
           Termin anfragen
@@ -161,6 +210,7 @@ export function ContactForm({ initialMode = "kontakt" }: Props) {
               onChange={(e) => setName(e.target.value)}
               autoComplete="name"
               aria-invalid={!!errors.name}
+              disabled={submitting}
             />
             {errors.name && <p className="mt-1 text-xs text-red-400">{errors.name}</p>}
           </div>
@@ -175,6 +225,7 @@ export function ContactForm({ initialMode = "kontakt" }: Props) {
               value={company}
               onChange={(e) => setCompany(e.target.value)}
               autoComplete="organization"
+              disabled={submitting}
             />
           </div>
         </div>
@@ -193,6 +244,7 @@ export function ContactForm({ initialMode = "kontakt" }: Props) {
               onChange={(e) => setEmail(e.target.value)}
               autoComplete="email"
               aria-invalid={!!errors.email}
+              disabled={submitting}
             />
             {errors.email && <p className="mt-1 text-xs text-red-400">{errors.email}</p>}
           </div>
@@ -209,6 +261,7 @@ export function ContactForm({ initialMode = "kontakt" }: Props) {
               onChange={(e) => setPhone(e.target.value)}
               autoComplete="tel"
               aria-invalid={!!errors.phone}
+              disabled={submitting}
             />
             {errors.phone && <p className="mt-1 text-xs text-red-400">{errors.phone}</p>}
           </div>
@@ -226,6 +279,7 @@ export function ContactForm({ initialMode = "kontakt" }: Props) {
               placeholder="z. B. Dienstagvormittag oder nächste Woche"
               value={preferredSlot}
               onChange={(e) => setPreferredSlot(e.target.value)}
+              disabled={submitting}
             />
           </div>
         )}
@@ -242,12 +296,59 @@ export function ContactForm({ initialMode = "kontakt" }: Props) {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             aria-invalid={!!errors.message}
+            disabled={submitting}
           />
           {errors.message && <p className="mt-1 text-xs text-red-400">{errors.message}</p>}
         </div>
 
-        <button type="submit" className="btn-primary w-full sm:w-auto">
-          {mode === "termin" ? "Termin anfragen" : "Nachricht senden"}
+        {/* Honeypot: visually hidden, not tabbable */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            left: "-10000px",
+            top: "auto",
+            width: "1px",
+            height: "1px",
+            overflow: "hidden",
+          }}
+        >
+          <label htmlFor="website">Website</label>
+          <input
+            id="website"
+            name="website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            value={website}
+            onChange={(e) => setWebsite(e.target.value)}
+          />
+        </div>
+
+        {formError && (
+          <p
+            className="rounded-md border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-200"
+            role="alert"
+          >
+            {formError.includes(CONTACT_EMAIL) ? (
+              formError
+            ) : (
+              <>
+                {formError}{" "}
+                <a href={CONTACT_MAILTO} className="underline hover:text-white">
+                  {CONTACT_EMAIL}
+                </a>
+              </>
+            )}
+          </p>
+        )}
+
+        <button type="submit" className="btn-primary w-full sm:w-auto" disabled={submitting}>
+          {submitting
+            ? "Wird gesendet…"
+            : mode === "termin"
+              ? "Termin anfragen"
+              : "Nachricht senden"}
         </button>
       </form>
     </div>
