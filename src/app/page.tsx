@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroVisual } from "@/components/HeroVisual";
 import { CtaBand } from "@/components/CtaBand";
@@ -16,6 +17,18 @@ import {
 } from "@/components/ServiceIcons";
 import { OWNER_NAME } from "@/lib/site";
 
+export const metadata: Metadata = {
+  title: {
+    absolute: "IT NWS – Lokale IT in Therwil & der Nordwestschweiz",
+  },
+  description:
+    "Persönliche IT aus Therwil für Privatkunden und KMU: Backup, Cyber Security, PC-Service, Gaming-PCs und Webseiten in Basel und der Nordwestschweiz.",
+  openGraph: {
+    title: "IT NWS – Lokale IT in Therwil & der Nordwestschweiz",
+    description:
+      "Persönliche IT aus Therwil für Privatkunden und KMU in Basel und der Nordwestschweiz.",
+  },
+};
 
 const deviceCards = [
   {

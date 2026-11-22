@@ -4,7 +4,7 @@ import { ServiceDetail, type ServiceDetailContent } from "@/components/ServiceDe
 export const metadata: Metadata = {
   title: "Cyber Security für KMU Therwil & Basel",
   description:
-    "Praxisnahe IT-Sicherheit für KMU: Zugänge, Schutz und klare Abläufe — damit Kundendaten und Betrieb geschützt bleiben.",
+    "Praxisnahe IT-Sicherheit für KMU in Therwil und Basel: Zugänge absichern, Angriffsfläche reduzieren und klare Abläufe — damit Kundendaten und Betrieb geschützt bleiben.",
 };
 
 const content: ServiceDetailContent = {

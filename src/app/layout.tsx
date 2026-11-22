@@ -18,12 +18,13 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://it-nws.ch"),
   title: {
-    default: "IT NWS – Lokale IT. Persönlich erreichbar.",
+    default: "IT NWS – Lokale IT in Therwil & der Nordwestschweiz",
     template: "%s | IT NWS",
   },
   description:
-    "Persönliche IT-Lösungen aus der Nordwestschweiz: Datensicherung, Cyber Security, PC-Service, Webseiten und KMU-Betreuung. Mehr Sicherheit. Mehr Kontrolle. Weniger Abhängigkeit.",
+    "Persönliche IT aus Therwil: Datensicherung, Cyber Security, PC-Service, Webseiten und KMU-Betreuung in Basel und der Nordwestschweiz. Mehr Sicherheit, mehr Kontrolle, weniger Abhängigkeit.",
   keywords: [
     "IT Nordwestschweiz",
     "IT NWS",
@@ -37,11 +38,13 @@ export const metadata: Metadata = {
     "Datensicherung Schweiz",
   ],
   openGraph: {
-    title: "IT NWS – Lokale IT. Persönlich erreichbar.",
+    title: "IT NWS – Lokale IT in Therwil & der Nordwestschweiz",
     description:
       "Lokaler IT-Partner in Therwil für Privatkunden, Vereine und KMU in Basel und der Nordwestschweiz.",
     locale: "de_CH",
     type: "website",
+    url: "https://it-nws.ch",
+    siteName: "IT NWS",
   },
   robots: { index: true, follow: true },
 };

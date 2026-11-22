@@ -4,7 +4,7 @@ import { ServiceDetail, type ServiceDetailContent } from "@/components/ServiceDe
 export const metadata: Metadata = {
   title: "IT-Support für KMU in Therwil & Basel",
   description:
-    "Persönlicher IT-Support für KMU in der Nordwestschweiz. Schnelle Hilfe, klarer Ansprechpartner — damit Ihr Betrieb weiterläuft.",
+    "Persönlicher IT-Support für KMU in Therwil, Basel und der Nordwestschweiz: Störungen beheben, Systeme betreuen — ein Ansprechpartner statt Hotline.",
 };
 
 const content: ServiceDetailContent = {

@@ -4,9 +4,9 @@ import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/CtaBand";
 
 export const metadata: Metadata = {
-  title: "IT für KMU",
+  title: "IT für KMU in der Nordwestschweiz",
   description:
-    "Persönliche IT-Betreuung für KMU in der Nordwestschweiz: Support, Remote-Hilfe, Backup, Cyber Security, Microsoft 365 und passende Arbeitsplätze — damit das Geschäft läuft.",
+    "IT-Betreuung für KMU und Vereine in Therwil, Basel und der Nordwestschweiz: Support, Backup, Cyber Security, Microsoft 365 und Arbeitsplätze — ein Ansprechpartner statt Hotline.",
 };
 
 const situations = [

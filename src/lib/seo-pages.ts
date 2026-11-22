@@ -14,9 +14,9 @@ export type SeoPageDef = {
 export const SEO_PAGES: SeoPageDef[] = [
   {
     slug: "pc-reparatur-therwil",
-    title: "PC-Reparatur Therwil",
+    title: "PC-Reparatur Therwil & Umgebung",
     description:
-      "PC- und Laptop-Reparatur in Therwil und Umgebung — Diagnose, SSD, Datenübertragung und persönliche Betreuung.",
+      "PC- und Laptop-Reparatur in Therwil (BL): Diagnose, SSD-Upgrade, Datenübertragung und persönliche Betreuung — ohne Shop-Druck.",
     eyebrow: "Therwil · Basel-Landschaft",
     h1: "PC-Reparatur in Therwil",
     lead: "Langsamer Rechner, defekte Festplatte oder Neu-Einrichtung? IT NWS hilft persönlich vor Ort in Therwil und der Region Basel-Landschaft.",
@@ -38,9 +38,9 @@ export const SEO_PAGES: SeoPageDef[] = [
   },
   {
     slug: "pc-reparatur-basel",
-    title: "PC-Reparatur Basel",
+    title: "PC-Reparatur Basel & Umgebung",
     description:
-      "PC-Service und Reparatur in Basel und Umgebung — persönlich, klar und mit Fokus auf Ihre Daten.",
+      "PC-Service und Reparatur in Basel und Umgebung: Diagnose, Einrichtung und Backup — persönlich, klar und mit Fokus auf Ihre Daten.",
     eyebrow: "Basel · Nordwestschweiz",
     h1: "PC-Reparatur in Basel",
     lead: "IT-Hilfe für Privatkunden und Selbständige in Basel: Diagnose, Einrichtung, Backup und Sicherheit — ohne Hotline und ohne PC-Shop-Druck.",
@@ -62,9 +62,9 @@ export const SEO_PAGES: SeoPageDef[] = [
   },
   {
     slug: "gaming-pcs-nordwestschweiz",
-    title: "Gaming-PCs Nordwestschweiz",
+    title: "Gaming-PCs Nordwestschweiz nach Mass",
     description:
-      "Gaming-PCs nach Mass in der Nordwestschweiz — Beratung, Zusammenstellung und Support, kein anonymer Shop.",
+      "Gaming-PCs nach Mass in der Nordwestschweiz: Beratung, Zusammenstellung und Support aus Therwil — kein anonymer Online-Shop.",
     eyebrow: "Gaming · Nordwestschweiz",
     h1: "Gaming-PCs nach Mass",
     lead: "Kein Katalog-Druck: Wir stellen Gaming-PCs passend zu Budget, Spielen und Raumklima zusammen — mit persönlichem Support aus der Nordwestschweiz.",
@@ -86,9 +86,9 @@ export const SEO_PAGES: SeoPageDef[] = [
   },
   {
     slug: "datensicherung-basel",
-    title: "Datensicherung Basel",
+    title: "Datensicherung & Backup Basel",
     description:
-      "Datensicherung und Backup-Konzepte in Basel und der Nordwestschweiz — geprüft, verständlich, persönlich betreut.",
+      "Datensicherung und Backup-Konzepte in Basel und der Nordwestschweiz — geprüft, verständlich und persönlich betreut für Privat und KMU.",
     eyebrow: "Backup · Basel",
     h1: "Datensicherung in Basel",
     lead: "Fotos, Kundenakten, Buchhaltung: Wir sorgen dafür, dass Backups im Ernstfall greifen — lokal abgestimmt und nachvollziehbar erklärt.",
@@ -110,9 +110,9 @@ export const SEO_PAGES: SeoPageDef[] = [
   },
   {
     slug: "synology-nas-basel",
-    title: "Synology NAS Basel",
+    title: "Synology NAS Basel & Region",
     description:
-      "Synology NAS Planung, Einrichtung und Backup in Basel / Nordwestschweiz — Ihre Daten, Ihre Kontrolle.",
+      "Synology NAS Planung, Einrichtung und Backup in Basel und der Nordwestschweiz — lokale Datensicherung unter Ihrer Kontrolle.",
     eyebrow: "NAS · Basel-Landschaft",
     h1: "Synology NAS in Basel und Umgebung",
     lead: "Lokale Datensicherung mit Synology: Planung, Einrichtung, Freigaben und Backup-Jobs — so, dass Sie den Überblick behalten.",
@@ -136,7 +136,7 @@ export const SEO_PAGES: SeoPageDef[] = [
     slug: "microsoft-365-support-basel",
     title: "Microsoft 365 Support Basel",
     description:
-      "Microsoft 365 Support und Absicherung für KMU in Basel und der Nordwestschweiz — persönlich, ohne Hotline.",
+      "Microsoft 365 Support und Absicherung für KMU in Basel und der Nordwestschweiz: MFA, Zugänge, Backup — persönlich, ohne Hotline.",
     eyebrow: "Microsoft 365 · Basel",
     h1: "Microsoft 365 Support in Basel",
     lead: "Einrichtung, Zugänge, Backup und Security für Microsoft 365 — damit die Cloud zuverlässig bleibt und jemand erreichbar ist.",
@@ -160,7 +160,7 @@ export const SEO_PAGES: SeoPageDef[] = [
     slug: "it-support-kmu-nordwestschweiz",
     title: "IT-Support KMU Nordwestschweiz",
     description:
-      "Persönlicher IT-Support für KMU in der Nordwestschweiz — Backup, Security, Microsoft 365 und laufende Betreuung.",
+      "Persönlicher IT-Support für KMU in der Nordwestschweiz aus Therwil: Backup, Security, Microsoft 365 und laufende Betreuung ohne Ticket-Warteschlange.",
     eyebrow: "KMU · Nordwestschweiz",
     h1: "IT-Support für KMU in der Nordwestschweiz",
     lead: "Wenn Systeme ausfallen, stehen Aufträge still. IT NWS ist der lokale Ansprechpartner für Backup, Security und alltagsnahe IT-Hilfe.",
@@ -182,9 +182,9 @@ export const SEO_PAGES: SeoPageDef[] = [
   },
   {
     slug: "webseiten-kmu-basel",
-    title: "Webseiten KMU Basel",
+    title: "Webseiten & Hosting KMU Basel",
     description:
-      "Webseiten, Hosting und SSL für KMU und Vereine in Basel und der Nordwestschweiz — gepflegt und erreichbar.",
+      "Webseiten, Hosting und SSL für KMU und Vereine in Basel und der Nordwestschweiz — schlank, gepflegt und mit lokalem Ansprechpartner.",
     eyebrow: "Web · Basel",
     h1: "Webseiten für KMU in Basel",
     lead: "Seriöse Firmen- und Vereinsseiten mit Hosting, Domain und SSL — plus jemanden, der bei Updates und Problemen erreichbar ist.",

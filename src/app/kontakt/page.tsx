@@ -14,9 +14,9 @@ import {
 
 
 export const metadata: Metadata = {
-  title: "Kontakt",
+  title: "Kontakt & Terminanfrage Therwil",
   description:
-    "Kontakt und Terminanfrage bei IT NWS — persönlicher IT-Partner in Therwil und der Nordwestschweiz.",
+    "Schreiben oder anrufen: IT NWS in Therwil. Terminanfrage für PC-Service, KMU-Support, Backup und Security in Basel und der Nordwestschweiz.",
 };
 
 export default function KontaktPage() {

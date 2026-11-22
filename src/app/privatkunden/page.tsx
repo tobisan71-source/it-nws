@@ -4,9 +4,9 @@ import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/CtaBand";
 
 export const metadata: Metadata = {
-  title: "Privatkunden",
+  title: "PC-Service für Privatkunden",
   description:
-    "PC einrichten, Datenübertragung, Diagnose, SSD, Datenrettung und Backup für Privatkunden in Therwil, Basel und der Nordwestschweiz.",
+    "PC und Notebook einrichten, Datenübertragung, Diagnose, SSD-Upgrade, Datenrettung und Backup — persönlicher Service für Privatkunden in Therwil, Basel und der Nordwestschweiz.",
 };
 
 const points = [

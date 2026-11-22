@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ServiceDetail, type ServiceDetailContent } from "@/components/ServiceDetail";
 
 export const metadata: Metadata = {
-  title: "PCs & Arbeitsplätze für KMU | IT NWS Therwil",
+  title: "PCs & Arbeitsplätze für KMU",
   description:
-    "Passende PCs, Notebooks und Peripherie für KMU — Beratung, Beschaffung und Einrichtung mit persönlicher Betreuung aus der Nordwestschweiz.",
+    "Passende PCs, Notebooks und Peripherie für KMU — Beratung, Beschaffung und Einrichtung mit persönlicher Betreuung aus Therwil und der Nordwestschweiz.",
 };
 
 const content: ServiceDetailContent = {

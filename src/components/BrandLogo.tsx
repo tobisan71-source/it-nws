@@ -16,7 +16,7 @@ export function BrandLogo({ className = "", size = "header" }: BrandLogoProps) {
   return (
     <Image
       src="/it-nws-logo-horizontal.svg"
-      alt="IT NWS Nordwestschweiz"
+      alt="Logo IT NWS – IT-Service Nordwestschweiz"
       width={s.width}
       height={s.height}
       priority={size === "header"}
