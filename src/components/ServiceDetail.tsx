@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL } from "@/lib/site";
 
 export type ServiceFaq = { q: string; a: string };
 
@@ -41,8 +42,8 @@ export function ServiceDetail({ content }: Props) {
     faq,
     ctaLabel,
     ctaHref = "/kontakt",
-    ctaSecondaryLabel = "Anrufen: 078 836 63 20",
-    ctaSecondaryHref = "tel:+41788366320",
+    ctaSecondaryLabel = `Anrufen: ${CONTACT_PHONE_DISPLAY}`,
+    ctaSecondaryHref = CONTACT_PHONE_TEL,
     ctaNote = "Persönlich statt Hotline · Antwort in der Regel 1 Werktag · Nordwestschweiz",
   } = content;
 
