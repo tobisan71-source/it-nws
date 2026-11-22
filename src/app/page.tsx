@@ -44,8 +44,8 @@ const deviceCards = [
     icon: IconDesktop,
   },
   {
-    title: "Hardware-Verkauf",
-    text: "Komponenten, Software, Hardware und Ersatzteile — mit Beratung statt Shop-Feeling.",
+    title: "Hardware & Komponenten",
+    text: "Persönliche Beratung und Zusammenstellung: Komponenten, Software, Hardware und Ersatzteile.",
     href: "/leistungen#hardware-verkauf",
     icon: IconHardware,
   },
@@ -212,7 +212,7 @@ export default function HomePage() {
             Geräte, Hosting & persönliche Beratung
           </h2>
           <p className="mt-4 max-w-2xl text-slate-300">
-            Notebooks & Tablets, Arbeitsplätze, Hardware-Verkauf und Gaming-PCs — plus Hosting,
+            Notebooks & Tablets, Arbeitsplätze, Hardware & Komponenten und Gaming-PCs — plus Hosting,
             Server, Webseitenbetreuung und E-Mail. Beratung, Einrichtung und Support, kein Angebot von der Stange.
           </p>
           <div className="mt-12 grid gap-5 sm:grid-cols-2">
