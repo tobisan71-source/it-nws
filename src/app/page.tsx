@@ -107,7 +107,7 @@ export default function HomePage() {
         <div className="relative container-narrow flex min-h-[88vh] flex-col justify-center px-5 py-24 sm:px-8 lg:px-10">
           <p className="eyebrow animate-fade-up">IT NWS · Therwil · Nordwestschweiz</p>
           <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl animate-fade-up-delay">
-            Persönliche IT. Persönlich erreichbar.
+            Lokale IT. Persönlich erreichbar.
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg animate-fade-up-delay-2">
             PC-Service, Datensicherung, Microsoft 365, Webseiten, Hosting und IT-Support —
