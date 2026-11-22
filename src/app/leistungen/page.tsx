@@ -11,7 +11,11 @@ export const metadata: Metadata = {
 const services = [
   {
     title: "PC-Service",
-    points: ["Reparatur & Wartung", "Setup neuer Geräte", "Performance & Updates"],
+    points: [
+      "Reparieren statt wegwerfen",
+      "Setup neuer Geräte",
+      "Performance & Updates",
+    ],
   },
   {
     title: "Gaming-PCs",
