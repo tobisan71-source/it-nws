@@ -34,8 +34,8 @@ const deviceCards = [
   },
   {
     id: "hardware-verkauf",
-    title: "Hardware-Verkauf",
-    text: "Komponenten, Software, Hardware und Ersatzteile — mit Beratung statt Shop-Feeling.",
+    title: "Hardware & Komponenten",
+    text: "Persönliche Beratung und Zusammenstellung: Komponenten, Software, Hardware und Ersatzteile.",
     icon: IconHardware,
   },
   {
@@ -103,14 +103,14 @@ const deviceDetails = [
   },
   {
     id: "hardware-verkauf",
-    eyebrow: "Beschaffung · Beratung",
-    title: "Hardware-Verkauf mit Beratung",
-    lead: "Komponenten, Software, Hardware und Ersatzteile: Wir empfehlen, was zu Ihrem Bedarf passt — ohne Katalog-Druck und mit jemandem, den Sie danach noch erreichen.",
+    eyebrow: "Beratung · Zusammenstellung",
+    title: "Hardware & Komponenten persönlich beraten",
+    lead: "Komponenten, Software, Hardware und Ersatzteile: Wir beraten, stellen zusammen und bleiben Ihr Ansprechpartner — persönlich und nachvollziehbar.",
     points: [
-      "Hardware-Komponenten nach Bedarf",
-      "Software und Hardware mit klarer Empfehlung",
+      "Beratung und Zusammenstellung nach Bedarf",
+      "Komponenten, Software und Hardware passend gewählt",
       "Ersatzteile, die wirklich passen",
-      "Persönliche Beratung statt Katalog-Druck",
+      "Persönlicher Ansprechpartner danach",
     ],
     cta: "Hardware besprechen",
     secondaryHref: "/leistungen/hardware",
