@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 
 const points = [
   {
-    title: "PC & Laptop einrichten",
-    text: "Neues Gerät sauber aufsetzen, Altlasten vermeiden und so erklären, dass Sie danach selbst zurechtkommen.",
+    title: "PC, Notebook & Tablet wieder flott",
+    text: "Langsam, voll oder unsicher? Wir richten ein, bereinigen und erklären verständlich.",
   },
   {
     title: "Datenübertragung",
@@ -74,6 +74,9 @@ export default function PrivatkundenPage() {
               </Link>
               <Link href="/datensicherung-basel" className="btn-secondary">
                 Datensicherung Basel
+              </Link>
+              <Link href="/leistungen#notebooks" className="btn-secondary">
+                Geräte-Leistungen
               </Link>
             </div>
           </div>

@@ -3,10 +3,40 @@ import { HeroVisual } from "@/components/HeroVisual";
 import { CtaBand } from "@/components/CtaBand";
 import {
   IconBuilding,
+  IconDesktop,
   IconGamepad,
   IconGlobe,
   IconHome,
+  IconLaptop,
+  IconTablet,
 } from "@/components/ServiceIcons";
+
+const deviceCards = [
+  {
+    title: "Gaming-PCs",
+    text: "Gaming-PCs nach Mass: Beratung, Zusammenstellung und Support — kein anonymer Shop.",
+    href: "/leistungen#gaming-pcs",
+    icon: IconGamepad,
+  },
+  {
+    title: "Notebooks",
+    text: "Auswahl, Einrichtung und Begleitung für mobiles Arbeiten — persönlich und verständlich.",
+    href: "/leistungen#notebooks",
+    icon: IconLaptop,
+  },
+  {
+    title: "Tablets",
+    text: "Einrichtung, Datensicherheit und Alltagshilfe — damit Apps und Daten zuverlässig laufen.",
+    href: "/leistungen#tablets",
+    icon: IconTablet,
+  },
+  {
+    title: "PCs & Arbeitsplätze",
+    text: "Arbeitsplatz einrichten, Daten übernehmen, Grundschutz — damit Sie produktiv starten.",
+    href: "/leistungen#arbeitsplaetze",
+    icon: IconDesktop,
+  },
+];
 
 const leistungen = [
   {
@@ -18,7 +48,7 @@ const leistungen = [
   {
     title: "Gaming-PCs",
     text: "Gaming-PCs nach Mass: Beratung, Zusammenstellung und Support — kein anonymer Shop.",
-    href: "/#gaming-pcs",
+    href: "/leistungen#gaming-pcs",
     icon: IconGamepad,
   },
   {
@@ -132,7 +162,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-white/10 bg-navy-900">
+      <section id="geraete" className="scroll-mt-24 border-b border-white/10 bg-navy-900">
+        <div className="container-narrow section-pad">
+          <p className="eyebrow">Geräte</p>
+          <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold text-white sm:text-4xl">
+            Geräte & persönliche Beratung
+          </h2>
+          <p className="mt-4 max-w-2xl text-slate-300">
+            Gaming-PCs, Notebooks, Tablets und Arbeitsplätze — Beratung, Einrichtung und Support,
+            kein Hardware-Verkauf von der Stange.
+          </p>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2">
+            {deviceCards.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Link
+                  key={item.title}
+                  href={item.href}
+                  className="group rounded-lg border border-white/10 bg-white/[0.03] p-6 transition hover:border-teal-500/50 hover:bg-white/[0.05]"
+                >
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-teal-500/30 bg-teal-500/10 text-teal-400 transition group-hover:border-teal-400/60">
+                    <Icon />
+                  </span>
+                  <h3 className="mt-4 font-display text-xl font-semibold text-white group-hover:text-teal-400">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-400">{item.text}</p>
+                  <span className="mt-4 inline-block text-sm font-medium text-teal-400">
+                    Mehr erfahren →
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-white/10 bg-navy-800">
         <div className="container-narrow section-pad">
           <p className="eyebrow">Warum IT NWS</p>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold text-white sm:text-4xl">
@@ -153,7 +219,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="ueber-mich" className="scroll-mt-24 border-b border-white/10 bg-navy-800">
+      <section id="ueber-mich" className="scroll-mt-24 border-b border-white/10 bg-navy-900">
         <div className="container-narrow section-pad grid gap-10 lg:grid-cols-[240px_1fr] lg:items-center">
           <div className="relative mx-auto aspect-[5/6] w-48 overflow-hidden rounded-lg border border-white/10 bg-navy-900 sm:w-56 lg:mx-0 lg:w-full">
             {/* eslint-disable-next-line @next/next/no-img-element */}
