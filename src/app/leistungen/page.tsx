@@ -56,7 +56,11 @@ const kmuServices = [
 const otherServices = [
   {
     title: "PC-Service",
-    points: ["Reparatur & Wartung", "Setup neuer Geräte", "Performance & Updates"],
+    points: [
+      "Reparieren statt wegwerfen",
+      "Setup neuer Geräte",
+      "Performance & Updates",
+    ],
   },
   {
     title: "Gaming-PCs",
@@ -64,7 +68,12 @@ const otherServices = [
   },
   {
     title: "Webseiten & Hosting",
-    points: ["Einfache Firmen-/Vereinsseiten", "Wartung", "Sicheres Hosting"],
+    points: [
+      "Firmen-, Vereins- und Privatseiten",
+      "Wartung",
+      "Sicheres Hosting & SSL",
+      "Sichere E-Mails",
+    ],
   },
 ];
 
