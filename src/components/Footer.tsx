@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandLogo } from "@/components/BrandLogo";
 
 export function Footer() {
   return (
@@ -6,7 +7,9 @@ export function Footer() {
       <div className="container-narrow section-pad !py-14">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <p className="font-display text-2xl font-bold text-white">IT NWS</p>
+            <Link href="/" aria-label="IT NWS – Startseite" className="inline-flex">
+              <BrandLogo size="footer" />
+            </Link>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-slate-400">
               IT Nordwestschweiz — persönlicher IT-Partner für Privatkunden, Vereine und KMU.
             </p>
