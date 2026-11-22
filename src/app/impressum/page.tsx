@@ -6,9 +6,11 @@ import {
   CONTACT_EMAIL,
   CONTACT_MAILTO,
   CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_INTL,
   CONTACT_PHONE_TEL,
   CONTACT_STREET,
   CONTACT_ZIP_CITY,
+  OWNER_NAME,
 } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -35,6 +37,8 @@ export default function ImpressumPage() {
             <p className="mt-2">
               IT NWS (IT Nordwestschweiz)
               <br />
+              {OWNER_NAME}
+              <br />
               {CONTACT_STREET}
               <br />
               {CONTACT_ZIP_CITY}
@@ -53,7 +57,8 @@ export default function ImpressumPage() {
               Telefon:{" "}
               <a href={CONTACT_PHONE_TEL} className="text-teal-400 hover:underline">
                 {CONTACT_PHONE_DISPLAY}
-              </a>
+              </a>{" "}
+              ({CONTACT_PHONE_INTL})
               <br />
               Adresse: {CONTACT_ADDRESS_LINE}
             </p>

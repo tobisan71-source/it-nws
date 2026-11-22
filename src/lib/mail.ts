@@ -1,5 +1,5 @@
 import nodemailer from "nodemailer";
-import { CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
+import { CONTACT_EMAIL, FORM_FROM_EMAIL, SITE_NAME } from "@/lib/site";
 
 export type ContactPayload = {
   mode: "kontakt" | "termin";
@@ -37,7 +37,7 @@ export async function sendContactMail(payload: ContactPayload): Promise<void> {
   const to = requireEnv("CONTACT_TO") || CONTACT_EMAIL;
   const from =
     requireEnv("SMTP_FROM") ||
-    `"${SITE_NAME}" <${user || CONTACT_EMAIL}>`;
+    `"${SITE_NAME}" <${FORM_FROM_EMAIL}>`;
 
   const transporter = nodemailer.createTransport({
     host,

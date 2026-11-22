@@ -1,6 +1,8 @@
 /** Öffentliche Kontaktdaten — zentrale Stelle für Mailto-/Tel-Links. */
 export const CONTACT_EMAIL = "info@it-nws.ch";
 export const CONTACT_MAILTO = `mailto:${CONTACT_EMAIL}`;
+/** Absender für Kontaktformular-Mails (SMTP_FROM). */
+export const FORM_FROM_EMAIL = "formular@it-nws.ch";
 
 /** Schweizer Lokalformat für Anzeige. */
 export const CONTACT_PHONE_DISPLAY = "079 474 19 71";
