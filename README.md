@@ -5,7 +5,13 @@ Marketing site for **IT NWS** (IT Nordwestschweiz) — Next.js App Router, TypeS
 ## Pages (v1)
 
 - `/` Home
-- `/leistungen`
+- `/leistungen` (+ Detailseiten)
+  - `/leistungen/it-support`
+  - `/leistungen/remote-support`
+  - `/leistungen/backup-wiederherstellung`
+  - `/leistungen/cyber-security`
+  - `/leistungen/microsoft-365`
+  - `/leistungen/hardware`
 - `/kmu`
 - `/privatkunden`
 - `/kontakt` (contact + appointment modes)
